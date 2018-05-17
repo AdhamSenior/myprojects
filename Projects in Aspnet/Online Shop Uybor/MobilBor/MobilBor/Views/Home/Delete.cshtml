@@ -1,0 +1,273 @@
+﻿@model MobilBor.Models.Adses
+@{
+    MobilBor.Models.Adses ad;
+    ViewBag.Title = "Удалить";
+    Layout = "~/Views/Shared/HomeView.cshtml";
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    int ID = ViewBag.ID;
+}
+@*@if (Session["User"].ToString() == Convert.ToString(id))
+{*@
+@using (Html.BeginForm("Delete", "Home", FormMethod.Post))
+{
+    
+    ad = db.Adses.FirstOrDefault(m => m.ID == ID);
+    
+<div class="col-md-6">
+    <table class="table table-bordered table-striped" style="padding-bottom:0em; margin-bottom:0px;">
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Тип операции")
+            </th>
+            <td>
+                @db.Operation_Types.FirstOrDefault(m => m.ID == ad.Operation_Id).Name_Uz
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Вид недвижимости")
+            </th>
+            <td>
+                @db.Property_Types.FirstOrDefault(m => m.ID == ad.Property_Id).Name_Uz
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Район")
+            </th>
+            <td>
+                @db.Areas.FirstOrDefault(m => m.ID == ad.Area_Id).Name_Uz
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+
+        <tr>
+            <th>
+                @Html.DisplayName("Зона")
+            </th>
+            <td>
+                @db.Zones.FirstOrDefault(m => m.ID == ad.Zone_Id).Name_Uz
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Адрес")
+            </th>
+            <td>
+                @ad.Address
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Состояние")
+            </th>
+            <td>
+                @db.State.FirstOrDefault(m => m.ID == ad.State_Id).Name_Uz
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Цена")
+            </th>
+            <td>
+                @ad.Price @db.Prices.FirstOrDefault(m => m.ID == ad.PriceType_Id).PriceUzk
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("contact")
+            </th>
+            <td>
+                @db.Contacts.FirstOrDefault(m => m.ID == ad.Contacts_Id).ContactUzk
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Номер телефона")
+            </th>
+            <td>
+                @ad.PhoneNumber
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+
+        <tr>
+            <th>
+                @Html.DisplayName("Дата")
+            </th>
+            <td>
+                @ad.Date
+            </td>
+        </tr>
+        }
+        catch { }
+    </table>
+</div>
+<div class="col-md-6">
+    <table class="table table-bordered table-striped" style="padding-bottom:0em; margin-bottom:0px;">
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Тип здания")
+            </th>
+            <td>
+                @db.Building_Type.FirstOrDefault(m => m.ID == ad.Build_Id).Name_Uz
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Классификация недвижимости")
+            </th>
+            <td>
+                @db.Classification_Type.FirstOrDefault(m => m.ID == ad.Classification_Id).Name_Uz
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Ближаещего метро")
+            </th>
+            <td>
+                @db.Metro.FirstOrDefault(m => m.ID == ad.Metro_Id).Name_Uz
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+
+
+
+        <tr>
+            <th>
+                @Html.DisplayName("Кол-во комнат")
+            </th>
+            <td>
+                @ad.CountRooms
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Площадь недвижимости")
+            </th>
+            <td>
+                @ad.SquarePlace м2
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+
+        <tr>
+            <th>
+                @Html.DisplayName("Жилая площадь")
+            </th>
+            <td>
+                @ad.LivePlace м2
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+
+        <tr>
+            <th>
+                @Html.DisplayName("Этаж")
+            </th>
+            <td>
+                @ad.Floor
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Всего этажей")
+            </th>
+            <td>
+                @ad.All_Floor
+            </td>
+        </tr>
+        }
+        catch { }
+        @try
+        {
+        <tr>
+            <th>
+                @Html.DisplayName("Короткое описание")
+            </th>
+            <td>
+                @ad.ShortText
+            </td>
+        </tr>
+        }
+        catch { }
+    </table>
+    <br /><br /><br />
+</div>
+
+
+
+
+<div class="form-group">
+    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+        <button type="submit" style="width:220px;" class="btn btn-success">Удалить</button>
+    </div>
+    <br />
+    <br />
+</div>
+    <br ><br >
+<br >}
+@*}*@

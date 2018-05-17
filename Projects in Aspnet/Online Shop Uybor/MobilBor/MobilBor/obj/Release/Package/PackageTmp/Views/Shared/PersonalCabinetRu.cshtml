@@ -1,0 +1,87 @@
+﻿
+@using PagedList.Mvc;
+
+@model PagedList.IPagedList<MobilBor.Models.Phones>
+@{
+    ViewBag.Title = "Персоналный кабинет";
+    Layout = "~/Views/Shared/HomeViewRu.cshtml";
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    ViewBag.mobilbor = "Mobilbor.uz";
+    ViewBag.free = "Бесплатно";
+    ViewBag.exchange = "Обмен";
+    ViewBag.ok = " ";
+}
+
+<div class="panel-body" style="padding-top:0px; padding-bottom:8em; padding-left:80px; padding-right:80px;">
+    <table id="datatable" class="table" style="padding-bottom:0em; margin-bottom:0px;">
+        <tr>
+           <th style="width:6%;">#</th>
+           <th>Заголовок</th>
+            <th>Цена</th>
+           <th>Марка</th>
+           <th>Состояния</th>
+           <th>Частное или юридичиское лицо</th>
+           <th>Ф.И.О</th>
+           <th>Дата объявления</th>
+            <th>Прочитано</th> 
+            <th>#</th> 
+        </tr>
+
+        @foreach (var items in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(Model => items.ID)
+                </td>
+                <td>
+                    @Html.ActionLink(items.Title, "DetailsRu", new { id = items.ID })
+                </td>
+                <td>
+                    @if (items.PriceType == 3)
+                    {
+                        @items.Price @ViewBag.ok @db.MoneyTypes.FirstOrDefault(x => x.ID == items.MoneyType).MoneyTypeRu
+                    }
+                    else if (items.PriceType == 1)
+                    {
+                        @ViewBag.free
+                    }
+                    else {
+                        @ViewBag.exchange
+                    }
+                </td>
+                <td>
+                    @ViewBag.brand
+                </td>
+                <td>
+                    @ViewBag.state
+                </td>
+                <td>
+                    @ViewBag.face
+                </td>
+                <td>
+                    @ViewBag.fullname
+                </td>
+                <td>
+                    @Html.DisplayFor(Model => items.DateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(Model => items.Count)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "EditRu", new { id = items.ID }, new { @class = "glyphicon glyphicon-trash", @style = "color:red" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br />
+    <div style="text-align:center;">
+        @Html.PagedListPager(Model, page => Url.Action("PersonalCabinetRu", new
+                       {
+                           page
+                       }))
+    </div>
+
+</div>
+
+

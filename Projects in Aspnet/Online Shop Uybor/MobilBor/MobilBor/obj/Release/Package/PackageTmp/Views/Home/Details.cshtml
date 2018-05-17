@@ -1,0 +1,350 @@
+﻿@model MobilBor.Models.Adses
+@{
+    ViewBag.Title = "Информация";
+    Layout = "~/Views/Shared/HomeView.cshtml";
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    MobilBor.Models.Adses ad;
+    int a = 1, b = 1, ID = ViewBag.ID;
+    ad = db.Adses.FirstOrDefault(m => m.ID == ID);
+}
+<link href="~/Content/mystyleforphoto.css" rel="stylesheet" />
+<!-- Bootstrap -->
+<link rel="stylesheet" href="~/Content/ustora/css/bootstrap.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="~/Content/ustora/css/font-awesome.min.css">
+<link href="~/Content/ImageGallery.css" rel="stylesheet" />
+<!-- Custom CSS -->
+<link rel="stylesheet" href="~/Content/ustora/css/owl.carousel.css">
+<link rel="stylesheet" href="~/Content/ustora/style.css">
+<link rel="stylesheet" href="~/Content/ustora/css/responsive.css">
+  
+
+ <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+                @{
+                var photosFromDb = ad.Images.Split(',');
+                }
+                 
+            <div class="col-md-6">
+                @foreach (var item in photosFromDb)
+                {
+                    if (b >= 8) { break; }
+                    b++;
+                    if (item != "0")
+                    {
+                        if (item == "") { break; }
+                        else if (a == 7)
+                        {
+                    <div class="col-md-12">
+                        <div class="thumbnail">
+                            <a href="/UploadedFiles/@item">
+                                <img src="~/UploadedFiles/@item" alt="Lights" style="width:100%; height:300px;">
+                            </a>
+                        </div>
+                    </div>
+                                a++;
+                            }
+                            else
+                            {
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <a href="/UploadedFiles/@item">
+                                <img src="~/UploadedFiles/@item" alt="Nature" style="width:100%; height:100px;">
+                            </a>
+                        </div>
+                    </div>
+							a++;
+                            }
+                        }
+
+                        else
+                        {
+                         <div class="col-md-12">
+                            <div class="thumbnail">
+                                <a href="~/Content/Home-icon.png">
+                                    <img src="~/Content/Home-icon.png" alt="Lights" style="width:100%; height:400px;">
+                                </a>
+                            </div>
+                        </div> 
+                            break;
+                        }
+                    
+                }
+
+            </div>
+
+            @if (ad.Property_Id == 1)
+            {
+                <div class="col-md-6">
+                    <div class="col-md-8">
+                        <h3 style="text-align:left">
+                            @ad.Price @db.Prices.FirstOrDefault(m => m.ID == ad.PriceType_Id).PriceUzk
+                            (@db.Contacts.FirstOrDefault(m => m.ID == ad.Contacts_Id).ContactUzk)
+                        </h3>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 style="text-align:right">@db.Users.FirstOrDefault(m => m.ID == ad.User_Id).Phone</h3>
+                    </div>
+                    <hr />
+                    <hr />
+                    <div class="col-md-12">
+                        <h4 style="text-align:center">@ad.Title</h4>
+                        <h6 style="text-align:right">@ad.Date</h6>
+                    </div>
+                                
+                                <table class="table" style="padding-bottom:0em; margin-bottom:0px;">
+                                    <tr>
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Вид недвижимости")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @db.Property_Types.FirstOrDefault(m => m.ID == ad.Property_Id).Name_Uz
+                                        </td>
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Тип операции")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @db.Operation_Types.FirstOrDefault(m => m.ID == ad.Operation_Id).Name_Uz
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Кол-во комнат")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @ad.CountRooms
+                                        </td>
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Общая площадь ")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @ad.SquarePlace м2
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Этаж")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @ad.Floor
+                                        </td>
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Всего этажей")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @ad.All_Floor
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Мебель")</b></h6>
+                                        </th>
+                                            @if (ad.Furniture == 1)
+                                            {
+                                                <td align="center"> Есть </td>
+                                            }
+                                            else
+                                            {
+                                                <td align="center"> Нет </td>
+                                            }
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Комиссионные")</b></h6>
+                                        </th>
+                                        @if (ad.Comissions == 1)
+                                        {
+                                            <td align="center"> Есть </td>
+                                        }
+                                        else
+                                        {
+                                            <td align="center"> Нет </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Тип жилья")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @db.Classification_Type.FirstOrDefault(m => m.ID == ad.Classification_Id).Name_Uz
+                                        </td>
+                                        @if (ad.LivePlace != 0)
+                                        {
+                                            <th>
+                                                <h6><b>@Html.DisplayName("Жилая площадь")</b></h6>
+                                            </th>
+                                            <td align="center">
+                                                @ad.LivePlace
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                       
+                                        @if (ad.State_Id != 0)
+                                        {
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Состояние")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @db.State.FirstOrDefault(m => m.ID == ad.State_Id).Name_Uz
+                                        </td>
+                                        }
+                                        else if (ad.Build_Id != 0)
+                                        {
+                                            <th>
+                                                <h6><b>@Html.DisplayName("Тип строения")</b></h6>
+                                            </th>
+                                            <td align="center">
+                                                @db.Building_Type.FirstOrDefault(m => m.ID == ad.Build_Id).Name_Uz
+                                            </td>
+                                            //goto one;
+                                        }
+                                        else if (ad.LivePlace != 0)
+                                        {
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Жилая площадь")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @ad.LivePlace м2
+                                        </td>
+                                            //goto two;
+                                        }
+                                    </tr>
+
+
+                                   @* <tr>
+                                        @if (ad.Build_Id != 0)
+                                        {
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Тип строения")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @db.Building_Type.FirstOrDefault(m => m.ID == ad.Build_Id).Name_Uz
+                                        </td>
+                                        }
+                                        one:;
+                                        else if (ad.LivePlace != 0)
+                                        {
+                                        <th>
+                                            <h6><b>@Html.DisplayName("Жилая площадь")</b></h6>
+                                        </th>
+                                        <td align="center">
+                                            @ad.LivePlace м2
+                                        </td>
+                                        }
+                                    </tr>
+                                    two:;*@
+                                  
+                             </table>
+                    <br />
+                    <div class="col-md-12">
+                        <h5><b>@Html.DisplayName("Описание")</b></h5>
+                        @ad.ShortText
+                    </div>
+
+
+                    @*<div class="col-md-6">
+                        <a href="~/Home/openphone/0"><input type="button" value="Назад" class="btn buttonPrevious" style="width:150px;" /> </a>
+                    </div>*@ 
+
+
+                                    </div>
+            }
+            else if (ad.Property_Id == 2)
+            {
+                <div class="col-md-6">
+                    <div class="col-md-8">
+                        <h3 style="text-align:left">
+                            @ad.Price @db.Prices.FirstOrDefault(m => m.ID == ad.PriceType_Id).PriceUzk
+                            (@db.Contacts.FirstOrDefault(m => m.ID == ad.Contacts_Id).ContactUzk)
+                        </h3>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 style="text-align:right">@db.Users.FirstOrDefault(m => m.ID == ad.User_Id).Phone</h3>
+                    </div>
+                    <hr />
+                    <hr />
+                    <div class="col-md-12">
+                        <h4 style="text-align:center">@ad.Title</h4>
+                        <h6 style="text-align:right">@ad.Date</h6>
+                    </div>
+
+                    <table class="table" style="padding-bottom:0em; margin-bottom:0px;">
+                        <tr>
+                            <th>
+                                <h6><b>@Html.DisplayName("Вид недвижимости")</b></h6>
+                            </th>
+                            <td align="center">
+                                @db.Property_Types.FirstOrDefault(m => m.ID == ad.Property_Id).Name_Uz
+                            </td>
+                            <th>
+                                <h6><b>@Html.DisplayName("Тип операции")</b></h6>
+                            </th>
+                            <td align="center">
+                                @db.Operation_Types.FirstOrDefault(m => m.ID == ad.Operation_Id).Name_Uz
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <h6><b>@Html.DisplayName("Общая площадь ")</b></h6>
+                            </th>
+                            <td align="center">
+                                @ad.SquarePlace м2
+                            </td>
+                            <th>
+                                <h6><b>@Html.DisplayName("Общая площадь ")</b></h6>
+                            </th>
+                            <td align="center">
+                                @db.Assignments.FirstOrDefault(m => m.ID == ad.Assignment_Id).assignmentNameRu
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <h6><b>@Html.DisplayName("Комиссионные")</b></h6>
+                            </th>
+                            @if (ad.Comissions == 1)
+                            {
+                                <td align="center"> Есть </td>
+                            }
+                            else
+                            {
+                                <td align="center"> Нет </td>
+                            }
+                        </tr>
+
+                    </table>
+                    <br />
+                    <div class="col-md-12">
+                        <h5><b>@Html.DisplayName("Описание")</b></h5>
+                        @ad.ShortText
+                    </div>
+
+                    @*<div class="col-md-6">
+                            <a href="~/Home/openphone/0"><input type="button" value="Назад" class="btn buttonPrevious" style="width:150px;" /> </a>
+                        </div>*@
+                </div>
+            }
+
+
+                                </div>
+                            </div>
+                        </div>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<script src="~/Content/ustora/js/owl.carousel.min.js"></script>
+<script src="~/Content/ustora/js/jquery.sticky.js"></script>
+
+<!-- jQuery easing -->
+<script src="~/Content/ustora/js/jquery.easing.1.3.min.js"></script>
+
+<!-- Main Script -->
+<script src="~/Content/ustora/js/main.js"></script>
+<script src="~/Scripts/ImageGallery.js"></script>

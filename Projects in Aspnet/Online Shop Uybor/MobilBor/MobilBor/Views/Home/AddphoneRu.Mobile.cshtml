@@ -1,0 +1,168 @@
+﻿@model MobilBor.Models.Phones
+
+@{
+    ViewBag.Title = "Подать объявление";
+    Layout = "~/Views/Shared/_LayoutRu.Mobile.cshtml";
+}
+
+
+
+@using (Html.BeginForm("AddphoneRu", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "Action" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div @*class="panel panel-primary"*@>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Title, "Заголовок", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-5">
+                                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br />
+                        <hr />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Brand, "Марка", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-3">
+                                @Html.DropDownListFor(model => model.Brand, SelectLists.Brands(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+
+                        @*<div class="form-horizontal">
+                                @Html.LabelFor(model => model.pricetype, "pricetype*", htmlAttributes: new { @class = "control-label col-md-3" })
+                                <div class="col-md-3">
+                                    @Html.DropDownListFor(model => model.pricetype, SelectLists.PriceTypes(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.pricetype, "", new { @class = "text-danger" })
+                                </div>
+                            </div>*@
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PriceType, " ", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-3">
+                                @*@Html.DropDownListFor(model => model.Sex, SelectLists.Sexs(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" } )*@
+                                <input id="pricetype" name="pricetype" type="radio" value="1" style="margin-top:10px;" />
+                                <span style="font-size:small">Бесплатно</span> &emsp;<br />
+                                <input id="pricetype" name="pricetype" type="radio" value="2" />
+                                <span style="font-size:small">Обмен</span><br />
+                                <input id="pricetype" name="pricetype" type="radio" value="3" />
+                                <span style="font-size:small">Cyмма</span>
+                                @Html.ValidationMessageFor(model => model.PriceType, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Price, "Cyмма", htmlAttributes: new { @class = "control-label col-sm-3" })
+                            <div class="col-md-1">
+                                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MoneyType, "", htmlAttributes: new { @class = "control-label col-md-1" })
+                            <div class="col-md-1">
+                                @Html.DropDownListFor(model => model.MoneyType, SelectLists.MoneyTypes(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.MoneyType, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Contact, "Договорная", htmlAttributes: new { @class = "control-label col-md-1" })
+                            <div class="col-md-1">
+                                @Html.DropDownListFor(model => model.Contact, SelectLists.Contacts(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.State, "Состояния", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-3">
+                                @Html.DropDownListFor(model => model.State, SelectLists.States(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Face, "Частное или юридичиское лицо", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-3">
+                                @Html.DropDownListFor(model => model.Face, SelectLists.Faces(Convert.ToInt32(Session["Lang"])), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Face, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Text, "Текст", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-5">
+                                @Html.TextAreaFor(model => model.Text, new { @class = "form-control", rows = "7" })
+                                @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <hr />
+                        <br />
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Picture1, " ", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-3">
+                                <span class="btn btn-success btn-file" style="width:250px;"><input type="file" name="File1" style="padding-top:0.5em;" /></span>
+                                @Html.ValidationMessageFor(model => model.Picture1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Picture2, "", htmlAttributes: new { @class = "control-label col-md-6" })
+                            <div class="col-md-3">
+                                <span class="btn btn-warning btn-file" style="width:250px;"><input type="file" name="File2" style="padding-top:0.5em;" /></span>
+                                @Html.ValidationMessageFor(model => model.Picture2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Picture3, "", htmlAttributes: new { @class = "control-label col-md-6" })
+                            <div class="col-md-3">
+                                <span class="btn btn-danger btn-file" style="width:250px;"><input type="file" name="File3" style="padding-top:0.5em;" /></span>
+                                @Html.ValidationMessageFor(model => model.Picture3, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <hr />
+                        <br />
+
+                        <div class="form-group">
+                            <div class="col-md-offset-5 col-md-8">
+                                <input type="submit" value="Добавить" class="btn btn-default btn-primary" style="width:225px;" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+}

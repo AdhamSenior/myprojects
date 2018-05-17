@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="093c157ddfca42daa5b72e51a46cbfa5" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="mobilborModel.Adses" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Areas" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Assignments" Width="1.5" PointX="2.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Brands" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Building_Type" Width="1.5" PointX="4.625" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Classification_Type" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Contact" Width="1.5" PointX="2.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Contacts" Width="1.5" PointX="6.625" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Faces" Width="1.5" PointX="4.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Metro" Width="1.5" PointX="6.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.MoneyTypes" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Operation_Types" Width="1.5" PointX="8.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Prices" Width="1.5" PointX="12.625" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.PriceTypes" Width="1.5" PointX="12.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Property_Types" Width="1.5" PointX="4.625" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Select" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.State" Width="1.5" PointX="10.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.States" Width="1.5" PointX="10.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Statuses" Width="1.5" PointX="12.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Users" Width="1.5" PointX="8.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Zones" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobilborModel.Accept_Rejections" Width="1.5" PointX="3.375" PointY="12.75" />
+        <EntityTypeShape EntityType="mobilborModel.Phones" Width="1.5" PointX="7.75" PointY="8.75" />
+        <EntityTypeShape EntityType="mobilborModel.Table_1" Width="1.5" PointX="0.75" PointY="8.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

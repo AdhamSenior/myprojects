@@ -1,0 +1,348 @@
+﻿@model MobilBor.Models.Adses
+@{
+    Layout = "~/Views/Shared/View.cshtml";
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    ViewBag.Title = "Add";
+}
+@if (Session["User"].ToString() == "1")
+{
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Квартира</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                   @using (Html.BeginForm("Add", "Cabinet", FormMethod.Post, FormMethod.Post, new { enctype = "multipart/form-data", ID = "Action" }))
+                   {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-horizontal form-label-left">
+
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Title">
+                                    Заголовок* <span class="required"></span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Title)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                    Тип операции <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" id="Operation_Id" name="Operation_Id">
+                                        @foreach (var item in SelectLists.Operations(Convert.ToInt32(Session["Lang"])))
+                                        {
+                                            <option value=@item.Value>@item.Text</option>
+                                        }
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.Operation_Id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Price" class="control-label col-md-3 col-sm-3 col-xs-12">Цена*</label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="input-group">
+                                        @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Price)
+                                        <div class="input-group-btn">
+                                            <select class="form-control" id="PriceType_Id" name="PriceType_Id" style="width:auto; align-content:flex-start">
+                                                @foreach (var item in SelectLists.PriceType(Convert.ToInt32(Session["Lang"])))
+                                                {
+                                                    <option value=@item.Value>@item.Text</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.PriceType_Id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Top_Ads" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="checkbox" class="flat" name="Contacts_Id" id="Contacts_Id" value="1" style="width:auto">
+                                    Договорная*
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                    Тип жилья<span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" id="Classification_Id" name="Classification_Id">
+                                        @foreach (var item in SelectLists.Classification(Convert.ToInt32(Session["Lang"])))
+                                        {
+                                            <option value=@item.Value>@item.Text</option>
+                                        }
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.Classification_Id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CountRooms">
+                                    Количество комнат<span class="required">*</span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    @Html.EditorFor(model => model.CountRooms, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                    @Html.ValidationMessageFor(model => model.CountRooms)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="SquarePlace">
+                                    Общая площадь м2<span class="required">*</span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    @Html.EditorFor(model => model.SquarePlace, new { htmlAttributes = new { @class = "form-control col-md-2 col-xs-6" } })
+                                    @Html.ValidationMessageFor(model => model.SquarePlace)
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-9" for="LivePlace">
+                                    Жилая площадь м2<span class="required"></span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    @Html.EditorFor(model => model.LivePlace, new { htmlAttributes = new { @class = "form-control col-md-2 col-xs-6" } })
+                                    @Html.ValidationMessageFor(model => model.LivePlace)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Floor">
+                                    Этаж<span class="required">*</span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    @Html.EditorFor(model => model.Floor, new { htmlAttributes = new { @class = "form-control col-md-2 col-xs-6" } })
+                                    @Html.ValidationMessageFor(model => model.Floor)
+                                </div>
+                                <label class="control-label col-md-2 col-sm-2 col-xs-9" for="All_Floor">
+                                    Этажность дома<span class="required">*</span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    @Html.EditorFor(model => model.All_Floor, new { htmlAttributes = new { @class = "form-control col-md-2 col-xs-6" } })
+                                    @Html.ValidationMessageFor(model => model.All_Floor)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Тип строения <span class="required"></span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" id="Build_Id" name="Build_Id">
+                                        <option value="0">Выберите</option>
+                                        @foreach (var item in SelectLists.Build(Convert.ToInt32(Session["Lang"])))
+                                        {
+                                            <option value=@item.Value>@item.Text</option>
+                                        }
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.Build_Id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label class="col-md-3 col-sm-3 col-xs-12 text-right">
+                                    Мебель<span class="required">*</span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    Да
+                                    <input type="radio" class="flat" name="Furniture" id="Furniture" value="1" /> Нет
+                                    <input type="radio" class="flat" name="Furniture" id="Furniture" value="2" checked="" required />
+                                </div>
+                                <label class="col-md-2 col-sm-2 col-xs-9 text-right">
+                                    Комиссионные<span class="required">*</span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    Да
+                                    <input type="radio" class="flat" name="Comissions" id="Comissions" value="1" /> Нет
+                                    <input type="radio" class="flat" name="Comissions" id="Comissions" value="2" checked="" required />
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Состояние <span class="required"></span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" id="State_Id" name="State_Id">
+                                        <option value="0">Выберите</option>
+                                        @foreach (var item in SelectLists.State(Convert.ToInt32(Session["Lang"])))
+                                        {
+                                            <option value=@item.Value>@item.Text</option>
+                                        }
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.State_Id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ShortText">
+                                    Описание <span class="required">*</span>
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    @Html.TextAreaFor(model => model.ShortText, new { htmlAttributes = new { @class = "form-control", rows = "3" } })
+                                    @Html.ValidationMessageFor(model => model.ShortText)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Фотографии</label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    @Html.TextBoxFor(model => model.Images, "", new { @type = "file", @multiple = "multiple" })
+                                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Регион <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" id="Area_Id" name="Area_Id">
+                                        @foreach (var item in SelectLists.Area(Convert.ToInt32(Session["Lang"])))
+                                        {
+                                            <option value=@item.Value>@item.Text</option>
+                                        }
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.Area_Id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    Массив <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" id="Zone_Id" name="Zone_Id">
+                                        @foreach (var item in SelectLists.Zone(Convert.ToInt32(Session["Lang"])))
+                                        {
+                                            <option value=@item.Value>@item.Text</option>
+                                        }
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.Zone_Id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Address">
+                                    Адрес* <span class="required"></span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                    @Html.ValidationMessageFor(model => model.Address)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Address">
+                                    Хоз. цена <span class="required"></span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    @Html.EditorFor(model => model.Price_Real, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                    @Html.ValidationMessageFor(model => model.Price_Real)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="PhoneNumber">
+                                    Номер телефона* <span class="required"></span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                    @Html.ValidationMessageFor(model => model.PhoneNumber)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Top_Ads" class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="checkbox" class="flat" name="Top_Ads" id="Top_Ads" value="1" style="width:auto">
+                                    Срочно
+                                </div>
+                            </div>
+
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                    <button type="submit" style="width:220px;" class="btn btn-success">Добавить</button>
+                                </div>
+                            </div>
+                        </div>
+                   }
+                </div>
+            </div>
+        </div>
+}
+<script>
+            function mouseoverok() {
+                document.getElementById("okreq").style.color = "red";
+            }
+            function mouseoutok() {
+                document.getElementById("okreq").style.color = "";
+            }
+            function mouseoverret() {
+                document.getElementById("retreq").style.color = "red";
+            }
+            function mouseoutret() {
+                document.getElementById("retreq").style.color = "";
+            }
+            function mouseovercl() {
+                document.getElementById("clreq").style.color = "red";
+            }
+            function mouseoutcl() {
+                document.getElementById("clreq").style.color = "";
+            }
+            function mouseoverold() {
+                document.getElementById("oldreq").style.color = "red";
+            }
+            function mouseoutold() {
+                document.getElementById("oldreq").style.color = "";
+            }
+            function mouseovernew() {
+                document.getElementById("newreq").style.color = "red";
+            }
+            function mouseoutnew() {
+                document.getElementById("newreq").style.color = "";
+            }
+</script>
+
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval")
+  @Scripts.Render("~/bundles/custom-validator")
+}
+
+<!-- jQuery -->
+<script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script>
+      // initialize the validator function
+      validator.message.date = 'not a real date';
+
+      // validate a field on "blur" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
+      $('form')
+        .on('blur', 'input[required], input.optional, select.required', validator.checkField)
+        .on('change', 'select.required', validator.checkField)
+        .on('keypress', 'input[required][pattern]', validator.keypress);
+
+      $('.multi.required').on('keyup blur', 'input', function() {
+        validator.checkField.apply($(this).siblings().last()[0]);
+      });
+
+      $('form').submit(function(e) {
+        e.preventDefault();
+        var submit = true;
+
+        // evaluate the form using generic validaing
+        if (!validator.checkAll($(this))) {
+          submit = false;
+        }
+
+        if (submit)
+          this.submit();
+
+        return false;
+      });
+</script>

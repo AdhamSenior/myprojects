@@ -1,0 +1,149 @@
+﻿﻿@model MobilBor.Models.Phones
+@{
+    ViewBag.Title = "Учириш";
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+    MobilBor.Models.Entities db = new MobilBor.Models.Entities();
+}
+
+@*<div style="padding-top:0px; padding-bottom:8em; padding-left:80px; padding-right:80px;" class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        Enter a valid email address
+    </div>*@
+
+<div class="panel-body" style="padding-top:0px; padding-bottom:8em; padding-left:20px; padding-right:20px;">
+    @using (Html.BeginForm("Edit", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "Action" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <table class="table" style="padding-bottom:30em;padding-left:20px; padding-right:20px; margin-bottom:0px;">
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Мурожаат рақами")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.ID)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Сарлавха")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Title)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Нархи")
+                </th>
+                <td>
+                    @if (Model.PriceType == 3)
+                {
+                        @Model.Price @ViewBag.ok @db.MoneyTypes.FirstOrDefault(x => x.ID == Model.MoneyType).MoneyTypeUzk
+                    }
+                    else if (Model.PriceType == 1)
+                    {
+                        @ViewBag.free
+                    }
+                    else {
+                        @ViewBag.exchange
+                    }
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Текст")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Text)
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Марка")
+                </th>
+                <td>
+                    @db.Brands.FirstOrDefault(x => x.ID == Model.Brand).BrandUzk
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Холати")
+                </th>
+                <td>
+                    @db.States.FirstOrDefault(x => x.ID == Model.State).StateUzk
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Жисмоний ёки юридик шахс")
+                </th>
+                <td>
+                    @db.Faces.FirstOrDefault(x => x.ID == Model.Face).FaceUzk
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Жўнатувчи")
+                </th>
+                <td>
+                    @db.Users.FirstOrDefault(x => x.ID == Model.ContactID).FullName
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Манзил")
+                </th>
+                <td>
+                    @db.Users.FirstOrDefault(x => x.ID == Model.ContactID).Country
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Телефон")
+                </th>
+                <td>
+                    @db.Users.FirstOrDefault(x => x.ID == Model.ContactID).Phone
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Электрон почта")
+                </th>
+                <td>
+                    @db.Users.FirstOrDefault(x => x.ID == Model.ContactID).Email
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Мурожаат санаси")
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.DateTime)
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        @Html.HiddenFor(x => x.ID)
+        <div class="form-group">
+            <div class="col-md-offset-4 col-md-8">
+                <input type="submit" value="Учириш" class="btn btn-danger" style="width:225px;" />
+            </div>
+        </div>
+    }
+</div>

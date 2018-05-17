@@ -1,0 +1,98 @@
+﻿
+@using PagedList.Mvc;
+
+@model PagedList.IPagedList<MobilBor.Models.Phones>
+
+@{
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    ViewBag.mobilbor = "Mobilbor.uz";
+    ViewBag.free = "Бесплатное";
+    ViewBag.exchange = "Обмен";
+    ViewBag.ok = " ";
+    ViewBag.Title = "Cписок телефонов";
+    Layout = "~/Views/Shared/HomeViewRu.cshtml";
+    int f = 0;
+}
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+
+            @foreach (var items in Model.OrderByDescending(x => x.ID))
+            {
+                if (f == 12) { break; }
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-shop-product">
+                        <div class="product-upper">
+                            @if (items.Picture1 != null)
+                            {
+                                <img style="width:220px;height:220px;" src="~/Models/Files/@items.Picture1" alt="@ViewBag.brand">
+                            }
+                            else {
+                                <img style="width:220px;height:220px;" src="~/Content/ustora/img/mobilbor.png" alt="">
+                            }
+                        </div>
+                        <br />
+                        <h5 align="center" style="height:35px; width:220px;">@Html.ActionLink(items.Title, "DetailsRu", new { id = items.ID })</h5>
+
+                        <div class="product-carousel-price">
+                            <ins>
+                                @if (items.PriceType == 3)
+                                {
+                                    <div class="col-md-6"><h6>@items.Price @ViewBag.ok @db.MoneyTypes.FirstOrDefault(x => x.ID == items.MoneyType).MoneyTypeUzk</h6></div>
+                                    @ViewBag.ok <div class="col-md-3" style="color:darkgray"><h6>@items.DateTime.ToString().Substring(0, 10)</h6></div>
+                                }
+                                else if (items.PriceType == 1)
+                                {
+                                    <div class="col-md-6">
+                                        <h6>
+                                            @ViewBag.free
+                                        </h6>
+                                    </div>
+                                    @ViewBag.ok
+                                    <div class="col-md-3" style="color:darkgray">
+                                        @items.DateTime.ToString().Substring(0, 10)
+                                    </div>
+                                }
+
+                                else
+                                {
+                                    <div class="col-md-6">
+                                        <h6> @ViewBag.exchange</h6>
+                                    </div>
+                                    @ViewBag.ok
+                                    <div class="col-md-3" style="color:darkgray">
+                                        <h6> @items.DateTime.ToString().Substring(0, 10)</h6>
+                                    </div>
+                                }
+                            </ins>
+                        </div>
+
+                        @*<div class="product-option-shop">
+                                <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="~/Home/Details/@items.ID">Add to cart</a>
+                            </div>*@
+                    </div>
+                </div>
+
+                f++;
+            }
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-pagination text-center">
+                    <nav>
+                        <div style="text-align:center;">
+                            @Html.PagedListPager(Model, page => Url.Action("OpenphonebysearchRu", new
+                       {
+                           page,
+                           search = Request.QueryString["search"]
+                       }))
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

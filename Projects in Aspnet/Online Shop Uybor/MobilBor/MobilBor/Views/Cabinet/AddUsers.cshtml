@@ -1,0 +1,101 @@
+﻿@model MobilBor.Models.Users
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+@if (Session["User"].ToString() == "1")
+{
+    using (Html.BeginForm("AddUsers", "Cabinet", FormMethod.Post, new { enctype = "multipart/form-data", id = "Action", @class = "form-horizontal form-label-left" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Узгартириш</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Title">
+                                Ф И О <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                @Html.ValidationMessageFor(model => model.FullName)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CountRooms">
+                                Email<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                @Html.ValidationMessageFor(model => model.Email)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CountRooms">
+                                Шахар, туман<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                @Html.ValidationMessageFor(model => model.Country)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CountRooms">
+                                Тел номер<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                @Html.ValidationMessageFor(model => model.Phone)
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Address">
+                                Логин* <span class="required"></span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                @Html.ValidationMessageFor(model => model.Login)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="PhoneNumber">
+                                Пароль* <span class="required"></span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                                @Html.ValidationMessageFor(model => model.Password)
+                            </div>
+                        </div>
+
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                <button type="submit" style="width:220px;" class="btn btn-warning">Қўшиш</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<!-- jQuery -->
+<script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>

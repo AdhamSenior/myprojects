@@ -1,0 +1,272 @@
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\csc.exe
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\vbc.exe
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\VBCSCompiler.exe
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\MobilBor.dll.config
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\MobilBor.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\MobilBor.pdb
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Antlr3.Runtime.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\EntityFramework.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Newtonsoft.Json.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Owin.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\PagedList.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\PagedList.Mvc.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.Helpers.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.Mvc.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.Optimization.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.Razor.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.WebPages.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\WebGrease.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\PagedList.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\PagedList.Mvc.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.Helpers.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.Mvc.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.Optimization.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.Razor.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.WebPages.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Antlr3.Runtime.pdb
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Newtonsoft.Json.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\EntityFramework.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\obj\Release\MobilBor.dll
+C:\Users\HP\Documents\Visual Studio 2015\Projects\MobilBor\MobilBor\obj\Release\MobilBor.pdb
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\obj\Release\MobilBor.csprojResolveAssemblyReference.cache
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\System.Web.Razor.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\EntityFramework.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.Owin.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\HP\documents\visual studio 2015\Projects\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\csc.exe
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\vbc.exe
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\VBCSCompiler.exe
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\MobilBor.dll.config
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\MobilBor.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\MobilBor.pdb
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Antlr3.Runtime.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\EntityFramework.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\EntityFramework.SqlServer.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Newtonsoft.Json.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Owin.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.Helpers.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.Mvc.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.Optimization.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.Razor.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.Razor.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\WebGrease.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\PagedList.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\PagedList.Mvc.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.Helpers.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.Mvc.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.Optimization.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.Razor.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.Razor.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Antlr3.Runtime.pdb
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Newtonsoft.Json.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\EntityFramework.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\EntityFramework.SqlServer.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\EntityFramework.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\obj\Release\MobilBor.csprojResolveAssemblyReference.cache
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\obj\Release\MobilBor.dll
+C:\Users\Azamat\Desktop\MobilBor2\MobilBor2\MobilBor\MobilBor\obj\Release\MobilBor.pdb
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\csc.exe
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\vbc.exe
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\VBCSCompiler.exe
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\MobilBor.dll.config
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\MobilBor.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\MobilBor.pdb
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Antlr3.Runtime.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\EntityFramework.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\EntityFramework.SqlServer.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Google.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Newtonsoft.Json.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Owin.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.Helpers.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.Mvc.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.Optimization.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.Razor.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.Deployment.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.Razor.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\WebGrease.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\PagedList.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\PagedList.Mvc.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.Helpers.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.Mvc.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.Optimization.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.Razor.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.Deployment.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\System.Web.WebPages.Razor.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Antlr3.Runtime.pdb
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Newtonsoft.Json.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\EntityFramework.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\EntityFramework.SqlServer.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Google.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.Helpers.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.Mvc.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.Optimization.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.Razor.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.WebPages.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\EntityFramework.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\obj\Release\MobilBor.csprojResolveAssemblyReference.cache
+D:\Project\MobilBor2\MobilBor\MobilBor\obj\Release\MobilBor.dll
+D:\Project\MobilBor2\MobilBor\MobilBor\obj\Release\MobilBor.pdb

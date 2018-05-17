@@ -1,0 +1,118 @@
+﻿@using PagedList.Mvc;
+
+@model PagedList.IPagedList<MobilBor.Models.Adses>
+@{
+    int id = ViewBag.user;
+    ViewBag.Title = "Шахсий кабинет";
+    Layout = "~/Views/Shared/HomeView.cshtml";
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    ViewBag.mobilbor = "UySavdosi.uz";
+}
+
+@if (Session["User"].ToString() == Convert.ToString(id)&& Session["User"].ToString()!="1")
+{
+
+<style type="text/css">
+    .even {
+    background-color:#3c87c7;
+    }
+    .block {
+    background-color:#f64848;
+    }
+    .waiting {
+     background-color:#4aea52;
+    }
+    .finish {
+     background-color:#fbf608;
+    }
+</style>
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="col-md-3 text-left"><a href="~/Home/PersonalCabinet"><i class="glyphicon glyphicon-th-list"></i><span class="cart-amunt"> Список обявления</span></a></div>
+        <div class="col-md-3 text-right"><a href="~/Home/AddHome"><i class="fa fa-plus"></i><span class="cart-amunt"> Квартира</span></a></div>
+        <div class="col-md-3 text-left"><a href="~/Home/AddHomeSecond"><i class="fa fa-plus"></i><span class="cart-amunt"> Земельная участка</span></a></div>
+        <div class="col-md-3 text-right"><a href="~/Home/Exit"><i class="glyphicon glyphicon-share"></i><span class="cart-amunt"> Выход</span></a></div>
+        <br />
+        <hr />
+        <div class="panel-body" style="padding-top:0px; padding-bottom:8em; padding-left:80px; padding-right:80px;">
+            <table id="datatable" class="table" style="padding-bottom:0em; margin-bottom:0px;">
+                <tr>
+                    <th>Тип операции</th>
+                    <th>Тип недвижимость</th>
+                    <th>Цена</th>
+                    <th>Адрес</th>
+                    <th>Номер телефона</th>
+                    <th>Дата</th>
+                    <th>Ҳолати</th>
+                    <th>#</th>
+                </tr>
+
+                @foreach (var items in Model.OrderByDescending(x => x.Date))
+                {
+                    <tr>
+                        <td>
+                            @Html.ActionLink(db.Operation_Types.FirstOrDefault(m => m.ID == items.Operation_Id).Name_Uz, "Details", new { id = items.ID })
+                        </td>
+                        <td>
+                            @db.Property_Types.FirstOrDefault(m => m.ID == items.Property_Id).Name_Uz
+                        </td>
+                        <td>
+                            @items.Price @db.Prices.FirstOrDefault(m => m.ID == items.PriceType_Id).PriceUzk
+                        </td>
+                        <td>
+                            @db.Areas.FirstOrDefault(m => m.ID == items.Area_Id).Name_Uz , @db.Zones.FirstOrDefault(m => m.ID == items.Zone_Id).Name_Uz , @items.Address
+                        </td>
+                        <td>
+                            @items.PhoneNumber
+                        </td>
+                        <td>
+                            @items.Date
+                        </td>
+                        @if (items.Sales == 3)
+                        {
+                            <td class="block">
+                                @db.Statuses.FirstOrDefault(x => x.ID == items.Sales).StatusUzk
+                            </td>
+                        }
+                        else if (items.Sales == 2)
+                        {
+                            <td class="waiting">
+                                @db.Statuses.FirstOrDefault(x => x.ID == items.Sales).StatusUzk
+                            </td>
+                        }
+                        else if (items.Sales == 4)
+                        {
+                        <td class="finish">
+                            @db.Statuses.FirstOrDefault(x => x.ID == items.Sales).StatusUzk
+                        </td>
+                        }
+                        else
+                        {
+                            <td class="block">
+                                @db.Statuses.FirstOrDefault(x => x.ID == items.Sales).StatusUzk
+                            </td>
+                            <td>
+                                @Html.ActionLink(" ", "Edit", new { id = items.ID }, new { @class = "glyphicon glyphicon-pencil", @style = "color:red" })
+                            </td>
+                        }
+                        <td>
+                            @Html.ActionLink(" ", "Delete", new { id = items.ID }, new { @class = "glyphicon glyphicon-trash", @style = "color:red" })
+                        </td>
+                     
+                </tr>
+                }
+
+            </table>
+            <br />
+            <div style="text-align:center;">
+                @Html.PagedListPager(Model, page => Url.Action("PersonalCabinet", new
+           {
+               page
+           }))
+            </div>
+        </div>
+    </div>
+</div>
+
+}

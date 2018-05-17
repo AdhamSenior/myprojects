@@ -1,0 +1,42 @@
+﻿@model MobilBor.Models.Users
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    @*<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">*@
+
+    <link rel="stylesheet" href="~/Content/normalize.css">
+    <link href="~/Content/login_temp.css" rel="stylesheet" />
+    <script src="~/Scripts/prefixfree.min.js"></script>
+
+</head>
+<body>
+    <h3></h3>
+    <div class="wrapper">
+        <form class="login" action="~/Account/Login" method="post">
+            @Html.AntiForgeryToken()
+            <p class="title">Кириш</p>
+            <input type="text" required="required" name="Email" placeholder="Логин" autofocus />
+            <i class="fa fa-user"></i>
+            <input type="password" required="required" name="password" placeholder="Пароль" />
+            <i class="fa fa-key"></i>
+            @*<a href="#">Forgot your password?</a>*@
+            <button>
+                <i class="spinner"></i>
+                <span class="state">Войти</span>
+            </button>
+        </form>
+        <br />
+        <a href="~/Registration/Register"><div style="color:aliceblue">Регистрация</div></a>
+        <footer><a target="blank" href="~/Home/Index">ads6565.uz</a></footer>
+    </div>
+    @*<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>*@
+    <script src="~/Scripts/index.js"></script>
+</body>
+</html>

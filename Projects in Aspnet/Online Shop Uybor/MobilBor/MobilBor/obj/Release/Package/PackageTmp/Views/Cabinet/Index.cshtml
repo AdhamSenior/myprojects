@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/View.cshtml";
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    //Layout = null;
+}
+@if (Session["User"].ToString() == "1")
+{
+<body class="nav-md">
+                    <!-- /top tiles -->
+                    <div class="row">
+                        <div class="row col-md-8">
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Всего объявления<small></small></h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li>
+                                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li>
+                                                        <a href="#">Settings 1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Settings 2</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="close-link"><i class="fa fa-close"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <canvas id="canvasDoughnut"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <br />
+                           
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="x_panel tile overflow_hidden">
+                                <div class="x_title">
+                                    <h2>Вид недвижимости</h2>
+
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <table class="table table-bordered" style="width:100%">
+                                        @foreach (var item in db.Property_Types)
+                                        {
+                                        <tr>
+                                            <td class="h4">
+                                                @item.Name_Uz
+                                            </td>
+                                            <td class="h3" style="background-color:mistyrose">
+                                                    <b>@db.Adses.Where(x => x.Property_Id == item.ID).Count()</b>
+                                            </td>
+                                        </tr>
+                                        }
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+    <!-- jQuery -->
+    <script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    @*<script src="~/Content/gentelella-master/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/gentelella-master/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/Content/gentelella-master/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="~/Content/gentelella-master/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="~/Content/gentelella-master/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="~/Content/gentelella-master/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/Content/gentelella-master/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="~/Content/gentelella-master/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->*@
+    @*<script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="~/Content/gentelella-master/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="~/Content/gentelella-master/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="~/Content/gentelella-master/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="~/Content/gentelella-master/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="~/Content/gentelella-master/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/Content/gentelella-master/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="~/Content/gentelella-master/vendors/moment/min/moment.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="~/Content/gentelella-master/build/js/custom.min.js"></script>*@
+
+</body>
+
+}
+
+<!-- Flot -->
+
+<!-- /Flot -->
+<!-- Doughnut Chart -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var options = {
+            legend: false,
+            responsive: false
+        };
+
+        var ctx = document.getElementById("canvasDoughnut");
+        var data = {
+            labels: [
+              "Квартира",
+              "Земельные участки",
+              "Прочее"
+            ],
+            datasets: [{
+                data: [@db.Adses.Where(x => x.Property_Id == 1).Count(), @db.Adses.Where(x => x.Property_Id == 2).Count(),@db.Adses.Where(x => x.Property_Id == 3).Count()],
+                backgroundColor: [
+                  "#455C73",
+                  "#9B59B6",
+                  "red"
+                ],
+                hoverBackgroundColor: [
+                  "#34495E",
+                  "#B370CF",
+                  "red"
+                ]
+
+            }]
+        };
+
+        var canvasDoughnut = new Chart(ctx, {
+            type: 'doughnut',
+            tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+            data: data
+        });
+
+    });
+</script>
+<!-- /Doughnut Chart -->

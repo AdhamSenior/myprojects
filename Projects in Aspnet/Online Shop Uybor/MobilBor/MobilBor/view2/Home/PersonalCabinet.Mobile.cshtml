@@ -1,0 +1,51 @@
+﻿
+@using PagedList.Mvc;
+
+@model PagedList.IPagedList<MobilBor.Models.Phones>
+@{
+    ViewBag.Title = "Шахсий кабинет";
+    Layout = "~/Views/Shared/_LayoutRu.Mobile.cshtml";
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    ViewBag.mobilbor = "Mobilbor.uz";
+    ViewBag.free = "Бепул";
+    ViewBag.exchange = "Айирбошлаш";
+    ViewBag.ok = " ";
+}
+<div class="col-md-12">
+    <div class="panel-body" style="padding-top:0px; padding-bottom:8em; padding-left:20px; padding-right:30px;">
+        <table id="datatable" class="table" style="padding-bottom:0em; margin-bottom:0px;">
+            <tr>
+                <th>Сарлавха</th>
+                <th>Сана</th>
+                <th>Курилганлар</th>
+                <th>#</th>
+            </tr>
+
+            @foreach (var items in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(items.Title, "Details", new { id = items.ID })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(Model => items.DateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(Model => items.Count)
+                    </td>
+                    <td>
+                        @Html.ActionLink(" ", "Edit", new { id = items.ID }, new { @class = "glyphicon glyphicon-trash", @style = "color:red" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <br />
+        <div style="text-align:center;">
+            @Html.PagedListPager(Model, page => Url.Action("PersonalCabinet", new
+       {
+           page
+       }))
+        </div>
+    </div>
+</div>

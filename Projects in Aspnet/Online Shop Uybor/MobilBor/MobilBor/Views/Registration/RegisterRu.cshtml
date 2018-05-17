@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    @*<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">*@
+
+    <link rel="stylesheet" href="~/Content/normalize.css">
+    <link href="~/Content/login_temp.css" rel="stylesheet" />
+    <script src="~/Scripts/prefixfree.min.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <form class="login" action="~/Registration/Register" method="post">
+            @Html.AntiForgeryToken()
+            <p style="text-align:center" class="title">Регистрация</p>
+            <input type="text" required="required" name="Name" placeholder="Ф.И.О." autofocus />
+            <i class="fa fa-user"></i>
+            <input type="text" required="required" name="Country" placeholder="Город, Paйoн" autofocus />
+            <i class="fa fa-user"></i>
+            <input type="text" name="Email" placeholder="Электронaя почта" autofocus />
+            <i class="fa fa-user"></i>
+            <input type="text" required="required" name="PhoneNumber" placeholder="Телефон" autofocus />
+            <i class="fa fa-user"></i>
+            <input type="text" required="required" name="Login" placeholder="Логин" autofocus />
+            <i class="fa fa-user"></i>
+            <input type="password" required="required" name="Password" placeholder="Пароль" />
+            <i class="fa fa-key"></i>
+            <button>
+                <i class="spinner"></i>
+                <span class="state">Регистрация</span>
+            </button>
+        </form>
+        <footer><a target="blank" href="~/Home/Index">UySavdosi.uz</a></footer>
+    </div>
+    <script src="~/Scripts/index.js"></script>
+</body>
+</html>

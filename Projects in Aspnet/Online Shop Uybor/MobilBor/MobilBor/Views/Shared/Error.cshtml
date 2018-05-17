@@ -1,0 +1,22 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Xaтoлик";
+}
+
+<h4 class="text-danger">Тизимга мурожаатлар сони кўпайганлиги сабабли бу саҳифага тушдингиз</h4>
+<h4 class="text-danger">Илтимос саҳифани янгиланг ёки бир оз вақтдан сонг қайта кириб кўринг. </h4>
+
+@if (Session["User"].ToString() == "1")
+{
+    if (Model != null)
+    {
+    <h3>@Model.Exception.GetType().Name</h3>
+    <pre>
+    @Model.Exception.ToString()
+    </pre>
+    <p>
+        thrown in @Model.ControllerName @Model.ActionName
+    </p>
+    }
+}

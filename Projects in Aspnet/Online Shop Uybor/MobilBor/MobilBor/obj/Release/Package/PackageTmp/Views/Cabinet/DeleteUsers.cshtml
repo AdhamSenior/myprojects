@@ -1,0 +1,87 @@
+﻿@model MobilBor.Models.Users
+@{
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    MobilBor.Models.Adses ad;
+    ViewBag.Title = "Учириш";
+    Layout = "~/Views/Shared/View.cshtml";
+    int ID = ViewBag.ID;
+}
+
+@if (Session["User"].ToString() == "1")
+{
+    using (Html.BeginForm("DeleteUsers", "Cabinet", FormMethod.Post))
+    {
+        if (Session["User"].ToString() == "1")
+        {
+            ad = db.Adses.FirstOrDefault(m => m.ID == ID);
+            try
+            {
+            <div class="col-md-12">
+                <table class="table table-bordered table-striped" style="padding-bottom:0em; margin-bottom:0px;text-align:center;">
+                    <tr>
+                        <th>
+                            @Html.DisplayName("Ф И О")
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.FullName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayName("Email")
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.Email)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayName("Тел номер")
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.Phone)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayName("Район")
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.Country)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            @Html.DisplayName("Логин")
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.Login)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayName("Пароль")
+                        </th>
+                        <td>
+                           @Html.DisplayFor(model => model.Password)
+                        </td>
+                    </tr>
+                    
+                </table>
+                <br /><br />
+            </div> 
+            }
+            catch { }
+        }
+
+    <br /><br />
+    <div class="form-group">
+        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+            <button type="submit" style="width:220px;" class="btn btn-danger">Учириш</button>
+        </div>
+    </div>
+    }
+}
+<!-- jQuery -->
+<script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>

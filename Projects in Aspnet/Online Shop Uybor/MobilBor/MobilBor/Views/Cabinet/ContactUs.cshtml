@@ -1,0 +1,64 @@
+﻿
+@using PagedList.Mvc;
+
+@model PagedList.IPagedList<MobilBor.Models.Contact>
+@{
+    ViewBag.Title = "Index New";
+    ViewBag.ok = " ";
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    Layout = "~/Views/Shared/View.cshtml";
+}
+@if (Session["User"].ToString() == "1")
+{
+<div class="panel panel-primary no-border" style="border:0px;">
+    <div class="panel-heading h1" style="margin-bottom:0px;"><p class="h3">Xaбарлар</p></div>
+    <div class="panel-body" style="padding-top:0px; padding-bottom:0em; padding-left:0px; padding-right:0px;">
+        <table id="datatable" class="table" style="padding-bottom:0em; margin-bottom:0px;">
+            <tr>
+                <th>
+                    @Html.DisplayName("ID")
+                </th>
+                <th>
+                    @Html.DisplayName("Мурожаат мавзуси")
+                </th>
+                <th>
+                    @Html.DisplayName("Жўнатувчи")
+                </th>
+                <th>
+                    @Html.DisplayName("Мурожаат рақами")
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink(item.Name, "ContactUsDetails", new { id = item.Id })
+                    </td>
+
+                    <td>
+                      @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+@Html.PagedListPager(Model, page => Url.Action("ContactUs", new
+{
+    page
+}))
+}
+
+<!-- jQuery -->
+<script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>

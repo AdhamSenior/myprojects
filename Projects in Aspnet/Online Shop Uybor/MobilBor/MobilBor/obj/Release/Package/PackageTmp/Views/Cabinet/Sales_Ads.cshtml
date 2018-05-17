@@ -1,0 +1,323 @@
+﻿@model IEnumerable<MobilBor.Models.Adses>
+@{
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Списка проданные домы</title>
+
+    <!-- Bootstrap -->
+    <link href="~/Content/gentelella-master/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/Content/gentelella-master/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/Content/gentelella-master/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="~/Content/gentelella-master/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="~/Content/gentelella-master/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="~/Content/gentelella-master/build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="/Cabinet/Index" class="site_title"><i class="fa fa-home"></i> <span>Админ</span></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="profile" style="text-align:center;">
+                        <div class="profile_img">
+                            <img style="width:120px;height:120px; margin-left:0px;" src="~/Content/77-512.png" alt="..." class="img-circle profile_img">
+                        </div>
+                    </div>
+                    <br />
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href="/Cabinet/Index"><i class="fa fa-home"></i> Главная сртаница </a>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-plus-circle"></i> Подать объявления <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/Cabinet/Add">Квартира</a></li>
+                                        <li><a href="/Cabinet/AddSecond">Земельная участка</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-newspaper-o"></i> Объявление <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/Cabinet/IndexNew">Активные объявление</a></li>
+                                        <li><a href="/Cabinet/newAdses">В ожидание</a></li>
+                                        <li><a href="/Cabinet/IndexOld">Неактивные объявление</a></li>
+                                        <li><a href="/Cabinet/Sales_Ads">Список проданные домы</a></li>
+                                        <li><a href="/Cabinet/Reject_Ads">Отказанные объявление</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-user"></i> Пользователи <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/Cabinet/Users">Админы</a></li>
+                                        <li><a href="/Cabinet/User">Клиенты</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/Cabinet/ContactUs"><i class="fa fa-envelope-o"></i> Сообщеные от клиента </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    <br />
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="width:220px; text-align:center;">
+                                    Личный кабинет
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="/Cabinet/ChangePassword"><i class="fa fa-recycle pull-right"></i> Изменить пароль</a></li>
+                                    <li><a href="/Cabinet/Exit"><i class="fa fa-sign-out pull-right"></i> Выход</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            @if (Session["User"].ToString() == "1")
+            {
+                <div class="right_col" role="main">
+                    <div class="">
+
+                        <div class="clearfix"></div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Сотилган уйлар руйхати</h2>
+                                        <ul class="nav navbar-right">
+                                            <li>
+                                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <table id="datatable-buttons" class="table table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Вид объявление</th>
+                                                    <th>Вид недвидимости</th>
+                                                    <th>Адрес</th>
+                                                    <th>Цена</th>
+                                                    <th>Дата</th>
+                                                    <th>Номер телефона</th>
+                                                    <th>Владелец</th>
+                                                    <th>Состояния</th>
+                                                    @*<th></th>*@
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+
+
+                                            <tbody>
+                                                @foreach (var item in Model.OrderByDescending(x => x.Date))
+                                                {
+                                                    <tr>
+                                                        <td>@item.ID</td>
+                                                        <td>@Html.ActionLink(db.Operation_Types.FirstOrDefault(x => x.ID == item.Operation_Id).Name_Uz, "Details", new { id = item.ID })</td>
+                                                        <td>@db.Property_Types.FirstOrDefault(x => x.ID == item.Property_Id).Name_Uz</td>
+                                                        <td>
+                                                            @db.Areas.FirstOrDefault(x => x.ID == item.Area_Id).Name_Uz ,
+                                                            @db.Zones.FirstOrDefault(x => x.ID == item.Zone_Id).Name_Uz ,
+                                                            @item.Address
+                                                        </td>
+                                                        <td>
+                                                            @item.Price
+                                                            @db.Prices.FirstOrDefault(x => x.ID == item.PriceType_Id).PriceUzk
+                                                        </td>
+                                                        <td>@item.Date</td>
+                                                        <td>@item.PhoneNumber</td>
+                                                        <td>@db.Users.FirstOrDefault(m => m.ID == item.User_Id).FullName</td>
+                                                        <td><a href="~/Cabinet/details/@item.ID"><text style="color:teal">@db.Statuses.FirstOrDefault(x => x.ID == item.Sales).StatusUzk</text></a></td>
+                                                        @*<td>
+        @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "glyphicon glyphicon-pencil", @style = "color:blue" })
+    </td>*@
+                                                        <td>
+                                                            @Html.ActionLink(" ", "Delete", new { id = item.ID }, new { @class = "glyphicon glyphicon-trash", @style = "color:red" })
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    ads6565.uz
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/gentelella-master/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/gentelella-master/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/Content/gentelella-master/vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="~/Content/gentelella-master/vendors/iCheck/icheck.min.js"></script>
+    <!-- Datatables -->
+    <script src="~/Content/gentelella-master/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/pdfmake/build/vfs_fonts.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="~/Content/gentelella-master/build/js/custom.min.js"></script>
+
+    <!-- Datatables -->
+    <script>
+      $(document).ready(function() {
+        var handleDataTableButtons = function() {
+          if ($("#datatable-buttons").length) {
+            $("#datatable-buttons").DataTable({
+              dom: "Bfrtip",
+              buttons: [
+                {
+                  extend: "copy",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "csv",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "excel",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "pdfHtml5",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "print",
+                  className: "btn-sm"
+                },
+              ],
+              responsive: true
+            });
+          }
+        };
+
+        TableManageButtons = function() {
+          "use strict";
+          return {
+            init: function() {
+              handleDataTableButtons();
+            }
+          };
+        }();
+
+        $('#datatable').dataTable();
+
+        $('#datatable-keytable').DataTable({
+          keys: true
+        });
+
+        $('#datatable-responsive').DataTable();
+
+        $('#datatable-scroller').DataTable({
+          ajax: "js/datatables/json/scroller-demo.json",
+          deferRender: true,
+          scrollY: 380,
+          scrollCollapse: true,
+          scroller: true
+        });
+
+        $('#datatable-fixed-header').DataTable({
+          fixedHeader: true
+        });
+
+        var $datatable = $('#datatable-checkbox');
+
+        $datatable.dataTable({
+          'order': [[ 1, 'asc' ]],
+          'columnDefs': [
+            { orderable: false, targets: [0] }
+          ]
+        });
+        $datatable.on('draw.dt', function() {
+          $('input').iCheck({
+            checkboxClass: 'icheckbox_flat-green'
+          });
+        });
+
+        TableManageButtons.init();
+      });
+    </script>
+    <!-- /Datatables -->
+</body>
+</html>

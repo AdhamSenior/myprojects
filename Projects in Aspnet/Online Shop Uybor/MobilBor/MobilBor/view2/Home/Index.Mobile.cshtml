@@ -1,0 +1,219 @@
+﻿﻿@model IEnumerable<MobilBor.Models.Phones>
+@{
+    ViewBag.mobilbor = "Mobilbor.uz";
+    ViewBag.free = "Бепул";
+    ViewBag.exchange = "Айирбошлаш";
+    ViewBag.ok = " ";
+    ViewBag.point = "..";
+    MobilBor.Models.Entities db = new MobilBor.Models.Entities();
+    Layout = null;
+    int a = 1, b = 1, c = 1, d = 1;
+}
+<!DOCTYPE html>
+<!--
+    ustora by freshdesignweb.com
+    Twitter: https://twitter.com/freshdesignweb
+    URL: https://www.freshdesignweb.com/ustora/
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mobilbor.uz</title>
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/Content/ustora/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/ustora/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/ustora/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/Content/ustora/style.css">
+    <link rel="stylesheet" href="~/Content/ustora/css/responsive.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="dropdown dropdown-small">
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="~/Home/Index"><span class="value">Узб|Рус </span>@*<b class="caret">*@</b></a>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="~/Home/IndexRu">Рус</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-small">
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="~/Account/Login"><span class="value">Кириш </span>@*<b class="caret">*@</b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="~/Home/Personalcabinet">Шахсий кабинет</a></li>
+                                </ul>
+                            </li>
+                            @*<li><a href="~/Account/Login"><i class="fa fa-user"></i> Кириш</a></li>
+                                <li><a href="~/Home/Exit"><i class="fa fa-user"></i> Чиқиш</a></li>*@
+
+                            <li><a href="~/Registration/Register"><i class="fa fa-user"></i> Руйхатдан утиш</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End header area -->
+
+    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="~/Home/Index"><img src="~/Content/ustora/img/smartphone.png" style="width:100px; height:100px;"><span class="cart-amunt">   Mobilbor</span></a></h1>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="~/home/addphone"><i class="fa fa-plus"></i><span class="cart-amunt">  Эълон бериш</span>  <span class="product-count"></span></a>
+
+                    </div>
+
+                    <div style="text-align:right">
+                        <form action="~/Home/Openphonebysearch" method="get">
+                            <input type="text" name="search" style="width:180px;" placeholder="Кидирув...">
+                            <input type="submit" value="Кидирув">
+                        </form>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div> <!-- End site branding area -->
+
+    <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li @*class="active"*@><a href="~/Home/Index">Бош сахифа</a>
+                        <li>
+                        <li><a href="~/Home/Openphone/0">Мобил курилмалар савдоси</a></li>
+                        <li><a href="~/Home/Contact">Контакт</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End mainmenu area -->
+    <br />
+
+    <div class="col-md-4">
+        <div class="single-product-widget">
+            @foreach (var items in Model.OrderByDescending(x => x.ID))
+            {
+                if (d == 11) { break; }
+                <div class="single-wid-product">
+                    @if (items.Picture1 != null)
+                    {
+                        <img alt="" class="product-thumb" style="width:90px; height:90px;" src="~/Models/Files/@items.Picture1">
+                    }
+                    else {
+                        <img alt="" class="product-thumb" style="width:90px; height:90px;" src="~/Content/ustora/img/mobilbor.png">
+                    }
+
+                    <h2>
+                        <a href="~/Home/details/@items.ID">
+                            @items.Title
+                        </a>
+                    </h2>
+                    <div class="product-wid-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="product-wid-price">
+                        @if (items.PriceType == 3)
+                        {
+                            @items.Price @ViewBag.ok @db.MoneyTypes.FirstOrDefault(x => x.ID == items.MoneyType).MoneyTypeUzk
+                        }
+                        else if (items.PriceType == 1)
+                        {
+                            @ViewBag.free
+                        }
+                        else {
+                            @ViewBag.exchange
+                        }
+                    </div>
+
+                </div>
+                d++;
+                <hr />
+            }
+        </div>
+    </div>
+
+
+
+
+
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="copyright">
+                        <p>&copy; 2017 Барча хукуклар химояланган. <a href="http://www.mobilbor.uz" target="_blank">Mobilbor.uz</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End footer bottom area -->
+    <!-- Latest jQuery form server -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <!-- Bootstrap JS form CDN -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- jQuery sticky menu -->
+    <script src="~/Content/ustora/js/owl.carousel.min.js"></script>
+    <script src="~/Content/ustora/js/jquery.sticky.js"></script>
+
+    <!-- jQuery easing -->
+    <script src="~/Content/ustora/js/jquery.easing.1.3.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="~/Content/ustora/js/main.js"></script>
+
+    <!-- Slider -->
+    <script type="text/javascript" src="~/Content/ustora/js/bxslider.min.js"></script>
+    <script type="text/javascript" src="~/Content/ustora/js/script.slider.js"></script>
+</body>
+</html>
+
+

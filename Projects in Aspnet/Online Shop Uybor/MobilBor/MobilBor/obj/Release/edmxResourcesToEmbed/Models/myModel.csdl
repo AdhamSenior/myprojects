@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mobilborModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brands">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandUzk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BrandRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactUzk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Faces">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FaceUzk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FaceRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MoneyTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MoneyTypeUzk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoneyTypeRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Phones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactID" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="Int32" />
+    <Property Name="PriceType" Type="Int32" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="MoneyType" Type="Int32" />
+    <Property Name="Contact" Type="Int32" />
+    <Property Name="State" Type="Int32" />
+    <Property Name="Face" Type="Int32" />
+    <Property Name="Text" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Picture1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Picture2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Picture3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Picture4" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Picture5" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Picture6" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="StatusID" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Count" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Prices">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PriceUzk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PriceRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PriceTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PriceTypeUzk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PriceTypeRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="States">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateUzk" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="StateRu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Statuses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusUzk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StatusRu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="FullName" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brands" EntityType="Self.Brands" />
+    <EntitySet Name="Contacts" EntityType="Self.Contacts" />
+    <EntitySet Name="Faces" EntityType="Self.Faces" />
+    <EntitySet Name="MoneyTypes" EntityType="Self.MoneyTypes" />
+    <EntitySet Name="Phones" EntityType="Self.Phones" />
+    <EntitySet Name="Prices" EntityType="Self.Prices" />
+    <EntitySet Name="PriceTypes" EntityType="Self.PriceTypes" />
+    <EntitySet Name="States" EntityType="Self.States" />
+    <EntitySet Name="Statuses" EntityType="Self.Statuses" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <FunctionImport Name="CheckLogin" IsComposable="true" ReturnType="Collection(mobilborModel.CheckLogin_Result)">
+      <Parameter Name="Login" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Contact" EntityType="mobilborModel.Contact" />
+    <EntitySet Name="Areas" EntityType="mobilborModel.Areas" />
+    <EntitySet Name="Building_Type" EntityType="mobilborModel.Building_Type" />
+    <EntitySet Name="Classification_Type" EntityType="mobilborModel.Classification_Type" />
+    <EntitySet Name="Metro" EntityType="mobilborModel.Metro" />
+    <EntitySet Name="Operation_Types" EntityType="mobilborModel.Operation_Types" />
+    <EntitySet Name="Property_Types" EntityType="mobilborModel.Property_Types" />
+    <EntitySet Name="Zones" EntityType="mobilborModel.Zones" />
+    <EntitySet Name="Adses" EntityType="mobilborModel.Adses" />
+    <EntitySet Name="State" EntityType="mobilborModel.State" />
+  </EntityContainer>
+  <ComplexType Name="CheckLogin_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="Type" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="70" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Login" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Uz" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Building_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Uz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Classification_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Uz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Metro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Uz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Operation_Types">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Uz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Property_Types">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Uz" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Zones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaID" Type="Int32" />
+    <Property Name="Name_Uz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Adses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Operation_Id" Type="Int32" />
+    <Property Name="Property_Id" Type="Int32" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Area_Id" Type="Int32" />
+    <Property Name="Zone_Id" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Build_Id" Type="Int32" />
+    <Property Name="State_Id" Type="Int32" />
+    <Property Name="Classification_Id" Type="Int32" />
+    <Property Name="Metro_Id" Type="Int32" />
+    <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Contacts_Id" Type="Int32" />
+    <Property Name="PriceType_Id" Type="Int32" />
+    <Property Name="ShortText" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CountRooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SquarePlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LivePlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Floor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="All_Floor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Images" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Uz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Ru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

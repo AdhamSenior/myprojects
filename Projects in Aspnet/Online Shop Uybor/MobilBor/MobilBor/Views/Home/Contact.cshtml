@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Контакт";
+    Layout = "~/Views/Shared/HomeView.cshtml";
+}
+
+<form action="~/Home/ContactUs" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="well well-sm">
+                    <form action="~/Home/ContactUs" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">
+                                        Ф.И.О.
+                                    </label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Ф.И.О." required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">
+                                        Номер телефона
+                                    </label>
+                                    <input type="text" class="form-control" name="phone" id="name" placeholder="Номер телефона" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">
+                                        Электронная почта
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-envelope"></span>
+                                        </span>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Электронная почта" required="required" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">
+                                        Заявка или Предложение
+                                    </label>
+                                    <textarea name="message" id="message" name="message" class="form-control" rows="9" cols="25" required="required"
+                                              placeholder="Заявка или Предложения"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                                   Отправить
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </form>
+
+        <div class="col-md-4">
+            <form>
+                <legend><span class="glyphicon glyphicon-globe"></span> Наш адресс</legend>
+                <address>
+                    <strong>г. Ташкент</strong><br>
+                    район Янусабад<br>
+                    ___________________<br>
+                    <abbr title="Электрон почта">
+                        Электронная почта:
+                    </abbr>
+                    info@ads6565.uz
+                </address>
+                <address>
+                    <a href="~/Home/Index">ads6565.uz</a>
+                </address>
+            </form>
+        </div>
+    </div>
+</div>

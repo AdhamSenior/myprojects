@@ -1,0 +1,228 @@
+﻿@using PagedList.Mvc;
+
+@model PagedList.IPagedList<MobilBor.Models.Adses>
+
+@{
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    ViewBag.Title = "Список объявление";
+    Layout = "~/Views/Shared/HomeView.cshtml";
+    string ImageName = "";
+    int? e1 = ViewBag.e1;
+    int? e2 = ViewBag.e2;
+    int? e3 = ViewBag.e3;
+    int? e4 = ViewBag.e4;
+    int? e5 = ViewBag.e5;
+    int? e6 = ViewBag.e6;
+    int? e7 = ViewBag.e7;
+    int? e8 = ViewBag.e8;
+    int? op = ViewBag.operation;
+}
+<style>
+     div.polaroid11 {
+ width: 100%;
+  height: 100px;
+  background-color: white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 1px;
+}
+
+div.container11 {
+  text-align: center;
+  padding: 22px 0px;
+}
+    .ribbon-wrapper-green {
+        width: 85px;
+        height: 88px;
+        overflow: hidden;
+        position: absolute;
+        top: -3px;
+        right: -3px;
+    }
+
+    .ribbon-green {
+        font: bold 15px Sans-Serif;
+        color: #333;
+        text-align: center;
+        text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        position: relative;
+        padding: 7px 0;
+        left: -5px;
+        top: 15px;
+        width: 120px;
+        background-color: #BFDC7A;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45));
+        background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45);
+        background-image: -moz-linear-gradient(top, #BFDC7A, #8EBF45);
+        background-image: -o-linear-gradient(top, #BFDC7A, #8EBF45);
+        color: #6a6340;
+        -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    }
+
+        .ribbon-green:before, .ribbon-green:after {
+            content: "";
+            border-top: 3px solid #6e8900;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            position: absolute;
+            bottom: -3px;
+        }
+
+        .ribbon-green:before {
+            left: 0;
+        }
+
+        .ribbon-green:after {
+            right: 0;
+        }
+</style>
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="col-md-2">
+                <div class="single-sidebar">
+                   @using (Html.BeginForm("Openphone/0", "Home", FormMethod.Post))
+                   {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group row">
+                        <div class="col-xs-12">
+                        <select name="operation">
+                            <option value="0">Выберите</option>
+                            <option value="1">Обмен</option>
+                            <option value="2">Продам</option>
+                            <option value="3">Сдам аренду</option>
+                        </select>
+                        </div>
+                    </div>
+                        <div class="form-group row">
+
+                            <div class="col-xs-12">
+                                <input class="form-control" name="ex1" type="text" placeholder="Кличество комнат от">
+                            </div>
+                            <div class="col-xs-12">
+                                <input class="form-control" name="ex2" type="text" placeholder="Кличество комнат до">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-xs-12">
+                                <input class="form-control" name="ex3" type="text" placeholder="Этаж от">
+                            </div>
+                            <div class="col-xs-12">
+                                <input class="form-control" name="ex4" type="text" placeholder="Этаж до">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-xs-12">
+                                <input class="form-control" name="ex5" type="text" placeholder="Общая площадь от">
+                            </div>
+                            <div class="col-xs-12">
+                                <input class="form-control" name="ex6" type="text" placeholder="Общая площадь до">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-xs-12">
+                                <input class="form-control" name="ex7" type="text" placeholder="Цена от">
+                            </div>
+                            <div class="col-xs-12">
+                                <input class="form-control" name="ex8" type="text" placeholder="Цена до">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                            <button type="submit" class="btn btn-success">Найти</button>
+                        </div>
+                        }
+                    </div>
+            </div>
+
+            <div class="col-md-10">
+                <div class="row">
+
+                                       @foreach (var items in Model.OrderBy(x => x.Top_Ads))
+                                       {
+                                           //if (f == 13) { break; }
+                                           <div class="col-md-3">
+                                               <div class="thumbnail">
+                                                   <a href="~/Home/details/@items.ID">
+                                                      @{var photosFromDb = items.Images.Split(',');
+
+                                                          foreach (var item in photosFromDb)
+                                                          {
+                                                              ImageName = photosFromDb[0];
+                                                              break;
+                                                          }
+                                                        }
+                                                        @if (ImageName != "0")
+                                                        {
+                                                            if (items.Top_Ads == 1)
+                                                            {
+                                                                <img src="~/UploadedFiles/@ImageName" alt="@ImageName" style="width:90%; height:180px;">
+                                                                <div class="ribbon-wrapper-green"><div class="ribbon-green">Срочно</div></div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <img src="~/UploadedFiles/@ImageName" alt="@ImageName" style="width:90%; height:180px;">
+                                                            }
+
+                                                        }
+                                                        else
+                                                        {
+                                                            if (items.Top_Ads == 1)
+                                                            {
+                                                                <img src="~/Content/Home-icon.png" alt="" style="width:90%; height:180px;">
+                                                                <div class="ribbon-wrapper-green"><div class="ribbon-green">Срочно</div></div>
+                                                            }
+                                                            else {
+                                                           <img src="~/Content/Home-icon.png" alt="" style="width:90%; height:180px;">
+                                                            }
+                                                        }
+                                                       <div class="polaroid11">
+                                                           <p style="color:black">@items.Title</p>
+                                                           <p style="text-align:center">
+                                                               @items.Price @db.Prices.FirstOrDefault(m => m.ID == items.PriceType_Id).PriceUzk
+                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                               @items.Date.ToString().Substring(0, 10)
+                                                           </p>
+                                                       </div>
+                                                   </a>
+                                               </div>
+                                           </div>
+                                           //f++;
+                                       }
+                </div>
+            </div>
+       
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-pagination text-center">
+                    <nav>
+                        <div style="text-align:center;">
+                       @Html.PagedListPager(Model, page => Url.Action("Openphone", new
+                  {
+                      page,
+                      ex1 = e1,
+                      ex2 = e2,
+                      ex3 = e3,
+                      ex4 = e4,
+                      ex5 = e5,
+                      ex6 = e6,
+                      ex7 = e7,
+                      ex8 = e8,
+                      operation = op
+                       }))
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

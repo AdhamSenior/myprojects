@@ -1,0 +1,259 @@
+﻿@model MobilBor.Models.Adses
+@{
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    MobilBor.Models.Adses ad;
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/View.cshtml";
+    int ID = ViewBag.ID;
+}
+
+@if (Session["User"].ToString() == "1")
+{
+    ad = db.Adses.FirstOrDefault(m => m.ID == ID);
+    try
+    {
+    <div class="col-md-6">
+        <table class="table table-bordered table-striped" style="padding-bottom:0em; margin-bottom:0px;">
+            <tr>
+                <th>
+                    @Html.DisplayName("Тип операции")
+                </th>
+                <td>
+                    @db.Operation_Types.FirstOrDefault(m => m.ID == ad.Operation_Id).Name_Uz
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Вид недвижимости")
+                </th>
+                <td>
+                    @db.Property_Types.FirstOrDefault(m => m.ID == ad.Property_Id).Name_Uz
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Район")
+                </th>
+                <td>
+                    @db.Areas.FirstOrDefault(m => m.ID == ad.Area_Id).Name_Uz
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Зона")
+                </th>
+                <td>
+                    @db.Zones.FirstOrDefault(m => m.ID == ad.Zone_Id).Name_Uz
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Адрес")
+                </th>
+                <td>
+                    @ad.Address
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Состояние")
+                </th>
+                <td>
+                    @db.State.FirstOrDefault(m => m.ID == ad.State_Id).Name_Uz
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Цена")
+                </th>
+                <td>
+                    @ad.Price @db.Prices.FirstOrDefault(m => m.ID == ad.PriceType_Id).PriceUzk
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("contact")
+                </th>
+                <td>
+                    @db.Contacts.FirstOrDefault(m => m.ID == ad.Contacts_Id).ContactUzk
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Номер телефона")
+                </th>
+                <td>
+                    @ad.PhoneNumber
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Дата")
+                </th>
+                <td>
+                    @ad.Date
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <table class="table table-bordered table-striped" style="padding-bottom:0em; margin-bottom:0px;">
+            <tr>
+                <th>
+                    @Html.DisplayName("Тип здания")
+                </th>
+                <td>
+                    @db.Building_Type.FirstOrDefault(m => m.ID == ad.Build_Id).Name_Uz
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Классификация недвижимости")
+                </th>
+                <td>
+                    @db.Classification_Type.FirstOrDefault(m => m.ID == ad.Classification_Id).Name_Uz
+                </td>
+            </tr>
+          
+
+
+
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Кол-во комнат")
+                </th>
+                <td>
+                    @ad.CountRooms
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Площадь недвижимости")
+                </th>
+                <td>
+                    @ad.SquarePlace м2
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Жилая площадь")
+                </th>
+                <td>
+                    @ad.LivePlace м2
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Этаж")
+                </th>
+                <td>
+                    @ad.Floor
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Всего этажей")
+                </th>
+                <td>
+                    @ad.All_Floor
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayName("Короткое описание")
+                </th>
+                <td>
+                    @ad.ShortText
+                </td>
+            </tr>
+        </table>
+    <br /><br /><br />
+    </div>
+    }
+    catch { }
+  
+if (ad.Sales == 3)
+{
+    using (Html.BeginForm("Except", "Cabinet", FormMethod.Post))
+    {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(Model => Model.ID)
+                <div class="form-group">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                        <button type="submit" style="width:220px;" class="btn btn-success">Активлаштириш</button>
+                    </div>
+                </div>
+            }
+    if (db.Users.FirstOrDefault(m => m.ID == ad.User_Id).UserType != 3) {
+        using (Html.BeginForm("Buy", "Cabinet", FormMethod.Post))
+        {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @Html.HiddenFor(Model => Model.ID)
+
+                <div class="form-group">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                        <button type="submit" style="width:220px;" class="btn btn-dark">Сотилди</button>
+                    </div>
+                </div>
+        }
+    }
+}
+
+if (ad.Sales == 4)
+{
+    using (Html.BeginForm("Except", "Cabinet", FormMethod.Post))
+    {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(Model => Model.ID)
+                <div class="form-group">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                        <button type="submit" style="width:220px;" class="btn btn-success">Активлаштириш</button>
+                    </div>
+                </div>
+            }
+            using (Html.BeginForm("Reject", "Cabinet", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @Html.HiddenFor(Model => Model.ID)
+
+                <div class="form-group">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                        <button type="submit" style="width:220px;" class="btn btn-dark">Рад этиш</button>
+                    </div>
+                </div>
+        }
+    }
+
+    if (ad.Sales == 5)
+    {
+        try
+        {
+            <div class="col-md-6 alignright">
+                <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 style="text-align:center">Хато хакида</h4><br />
+                    <strong>@ad.About_Mistake)</strong>
+                </div>
+            </div>
+            }
+            catch { }
+        }
+    }
+
+
+<!-- jQuery -->
+<script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>

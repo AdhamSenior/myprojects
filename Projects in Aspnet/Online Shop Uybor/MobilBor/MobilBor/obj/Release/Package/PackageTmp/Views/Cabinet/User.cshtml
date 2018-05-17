@@ -1,0 +1,103 @@
+﻿
+@using PagedList.Mvc;
+
+@model PagedList.IPagedList<MobilBor.Models.Users>
+@{
+    ViewBag.Title = "Index New";
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    Layout = "~/Views/Shared/View.cshtml";
+}
+@if (Session["User"].ToString() == "1")
+{
+    <div class="panel panel-primary no-border" style="border:0px;">
+        <div class="panel-heading h1" style="margin-bottom:0px;"><p class="h3">Жами эълонлар</p></div>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayName("ID")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Ф И О")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Тел номер")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Логин")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Пароль")
+                    <th style="width:30px">
+                        @Html.DisplayName(" ")
+                    </th>
+                    <th style="width:30px">
+                        @Html.DisplayName(" ")
+                    </th>
+                   
+                </tr>
+
+                @foreach (var item in Model.OrderByDescending(x=>x.UserType==3))
+                {
+                    <tr>
+                        @if (item.Type == 2)
+                        {
+                            <td class="red1">
+                                @Html.DisplayFor(modelItem => item.ID)
+                            </td>
+                        }
+                        else {
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ID)
+                            </td>
+                        }
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FullName)
+                        </td>
+                       
+                         <td>
+                            @item.Phone
+                        </td>
+                        
+                        <td>
+                            @item.Login
+                        </td>
+                        
+                        <td>
+                            @item.Password
+                        </td>
+                        <td>
+                            @if (item.Type == 1)
+                            {
+                                @Html.ActionLink(" ", "Really", new { id = item.ID }, new { @class = "fa fa-lock", @style = "color:purple" })
+                            }
+                            else
+                            {
+                                @Html.ActionLink(" ", "Really", new { id = item.ID }, new { @class = "fa fa-unlock", @style = "color:purple" })
+                            }
+                        </td>
+                        <td>
+                            @Html.ActionLink(" ", "DeleteUsers", new { id = item.ID }, new { @class = "glyphicon glyphicon-trash", @style = "color:red" })
+                        </td>
+
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+    @Html.PagedListPager(Model, page => Url.Action("Userss", new
+{
+    page
+}))
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/custom-validator")
+}
+
+<!-- jQuery -->
+<script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>

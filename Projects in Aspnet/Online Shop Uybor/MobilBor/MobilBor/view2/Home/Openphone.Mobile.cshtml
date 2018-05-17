@@ -1,0 +1,89 @@
+﻿﻿@using PagedList.Mvc;
+
+@model PagedList.IPagedList<MobilBor.Models.Phones>
+
+@{
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    ViewBag.mobilbor = "Mobilbor.uz";
+    ViewBag.free = "Бепул";
+    ViewBag.exchange = "Айирбошлаш";
+    ViewBag.ok = " ";
+    ViewBag.Point = "...";
+    ViewBag.Title = "Мобил курилмалар руйхати";
+    // Layout = "~/Views/Shared/HomeView.cshtml";
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+    int f = 0;
+}
+
+<style>
+    ul.demo {
+        list-style-type: none;
+        margin: 0;
+        padding: 15px;
+    }
+</style>
+
+<ul class="demo">
+    @foreach (var items in Model.OrderByDescending(x => x.ID))
+            {
+                if (f == 12) { break; }
+
+                <li>
+                    @*@if (items.Picture1 != null)
+                        {
+                            <img style="width:220px;height:220px;" src="~/Models/Files/@items.Picture1" alt="@ViewBag.brand">
+                        }
+                        else {
+                            <img style="width:220px;height:220px;" src="~/Content/ustora/img/mobilbor.png" alt="">
+                        }*@
+
+                    <h3>
+                        @if (items.Title.Length > 40)
+                        {
+                            @Html.ActionLink(items.Title.ToString().Substring(0, 40), "Details", new { id = items.ID }); @ViewBag.Point
+                        }
+                        else {
+                            @Html.ActionLink(items.Title, "Details", new { id = items.ID });
+                        }
+                    </h3>
+
+                    @if (items.PriceType == 3)
+                    {
+                        <p><strong>@items.Price @ViewBag.ok @db.MoneyTypes.FirstOrDefault(x => x.ID == items.MoneyType).MoneyTypeUzk</strong></p>
+                        <p>@items.DateTime.Value.ToString("D") @ViewBag.ok @items.DateTime.Value.ToString("t")</p>
+                    }
+                    else if (items.PriceType == 1)
+                    {
+                        <p><strong>@ViewBag.free</strong></p>
+                        <p>@items.DateTime.Value.ToString("D") @ViewBag.ok @items.DateTime.Value.ToString("t")</p>
+                    }
+                    else
+                    {
+                        <p><strong>@ViewBag.exchange</strong></p>
+                        <p>@items.DateTime.Value.ToString("D") @ViewBag.ok @items.DateTime.Value.ToString("t")</p>
+                    }
+                </li>
+        f++;
+
+        <hr />
+    }
+</ul>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="product-pagination text-center">
+            <nav>
+                <div style="text-align:center;">
+                    @Html.PagedListPager(Model, page => Url.Action("Openphone", new
+               {
+                   page
+               }))
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+

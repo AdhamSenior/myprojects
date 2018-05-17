@@ -1,0 +1,254 @@
+﻿﻿@model MobilBor.Models.Phones
+@{
+    ViewBag.Title = "Маълумот";
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+    MobilBor.Models.Entities db = new MobilBor.Models.Entities();
+    ViewBag.mobilbor = "Mobilbor.uz";
+    ViewBag.free = "Бепул";
+    ViewBag.exchange = "Айирбошлаш";
+    ViewBag.ok = " ";
+}
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="~/Content/ustora/css/bootstrap.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="~/Content/ustora/css/font-awesome.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="~/Content/ustora/css/owl.carousel.css">
+<link rel="stylesheet" href="~/Content/ustora/style.css">
+<link rel="stylesheet" href="~/Content/ustora/css/responsive.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="product-content-right">
+                    <div class="product-breadcroumb">
+                        <a href="">Бош сахифа</a>
+                        <a href="~/Home/Openphone/@Model.Brand">@ViewBag.brand</a>
+                        <a href="">@Html.DisplayFor(model => model.Title)</a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="product-images">
+                                <div class="product-main-img">
+                                    @if (Model.Picture1 != null)
+                                    {
+                                        <a href="~/Models/Files/@Model.Picture1"><img style="width:300px;height:300px;" src="~/Models/Files/@Model.Picture1" alt=""></a>
+                                    }
+                                    else {
+                                        <a href="~/Content/ustora/img/mobilbor.png">
+                                            <img style="width:300px;height:300px;" src="~/Content/ustora/img/mobilbor.png" alt="">
+                                        </a>
+                                    }
+                                </div>
+
+                                <div class="product-gallery">
+                                    <a href="~/Models/Files/@Model.Picture2"><img style="width:120px;height:120px;" src="~/Models/Files/@Model.Picture2" alt=""></a>
+                                    <a href="~/Models/Files/@Model.Picture3"><img style="width:120px;height:120px;" src="~/Models/Files/@Model.Picture3" alt=""></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="product-inner">
+                                <h2 class="product-name">@Html.DisplayFor(model => model.Title)</h2>
+                                <div class="product-inner-price">
+                                    <ins>
+                                        @if (Model.PriceType == 3)
+                                        {
+                                            <div class="col-md-6">
+                                                @Model.Price @ViewBag.ok
+                                                @db.MoneyTypes.FirstOrDefault(x => x.ID == Model.MoneyType).MoneyTypeUzk
+                                            </div>
+                                            <div class="col-md-3" style="color:black">
+                                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"> @Model.DateTime.ToString().Substring(0, 10)</span>
+                                            </div>
+
+                                        }
+                                        else if (Model.PriceType == 1)
+                                        {
+                                            <div class="col-md-6">
+                                                @ViewBag.free
+                                            </div>
+                                            <div class="col-md-3" style="color:black">
+                                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"> @Model.DateTime.ToString().Substring(0, 10)</span>
+                                            </div>
+                                        }
+                                        else {
+                                            <div class="col-md-6">
+                                                @ViewBag.exchange
+                                            </div>
+                                            <div class="col-md-3" style="color:black">
+                                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"> @Model.DateTime.ToString().Substring(0, 10)</span>
+                                            </div>
+                                        }
+                                    </ins>
+                                </div>
+
+                                <div role="tabpanel">
+                                    <ul class="product-tab" role="tablist">
+                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Тавсиф</a></li>
+                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Маълумот</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                            <div id="wine-name"></div>
+
+                                            @{
+                                                Model.Text = Model.Text.Replace("\r\n", "<br><br>");
+                                            }
+
+                                            <p>
+                                                @Html.Raw(Model.Text)
+                                            </p>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="profile">
+
+                                            <div class="submit-review">
+                                                <div class="panel-body" style="padding-top:0px; padding-bottom:0em; padding-left:0px; padding-right:0px;">
+                                                    <table class="table" style="padding-bottom:0em; margin-bottom:0px;">
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Сарлавха")
+                                                            </th>
+                                                            <td>
+                                                                @Html.DisplayFor(model => model.Title)
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Марка")
+                                                            </th>
+                                                            <td>
+                                                                @ViewBag.brand
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Холати")
+                                                            </th>
+                                                            <td>
+                                                                @ViewBag.state
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Жисмоний ёки юридик шахс")
+                                                            </th>
+                                                            <td>
+                                                                @ViewBag.face
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Жўнатувчи")
+                                                            </th>
+                                                            <td>
+                                                                @ViewBag.fullname
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Манзил")
+                                                            </th>
+                                                            <td>
+                                                                @ViewBag.country
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Телефон")
+                                                            </th>
+                                                            <td>
+                                                                @ViewBag.phone
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Электрон почта")
+                                                            </th>
+                                                            <td>
+                                                                @ViewBag.email
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Мурожаат санаси")
+                                                            </th>
+                                                            <td>
+                                                                @Html.DisplayFor(model => model.DateTime)
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayName("Курилган")
+                                                            </th>
+                                                            <td>
+                                                                @Html.DisplayFor(model => model.Count)
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var html = $("#wine-name").html();
+    html = html.substring(0, 4) + "<br>" + html.substring(4);
+    $("wine-name").html(html);
+</script>
+<!-- Latest jQuery form server -->
+<script src="https://code.jquery.com/jquery.min.js"></script>
+
+<!-- Bootstrap JS form CDN -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- jQuery sticky menu -->
+<script src="~/Content/ustora/js/owl.carousel.min.js"></script>
+<script src="~/Content/ustora/js/jquery.sticky.js"></script>
+
+<!-- jQuery easing -->
+<script src="~/Content/ustora/js/jquery.easing.1.3.min.js"></script>
+
+<!-- Main Script -->
+<script src="~/Content/ustora/js/main.js"></script>

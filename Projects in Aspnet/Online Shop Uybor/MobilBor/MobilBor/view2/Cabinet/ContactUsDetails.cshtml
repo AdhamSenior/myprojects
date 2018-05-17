@@ -1,0 +1,95 @@
+﻿@model MobilBor.Models.Contact
+@{
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/View.cshtml";
+}
+@if (Session["User"].ToString() == "1")
+{
+<script>
+    function mouseoverok() {
+        document.getElementById("okreq").style.color = "red";
+    }
+    function mouseoutok() {
+        document.getElementById("okreq").style.color = "";
+    }
+    function mouseoverret() {
+        document.getElementById("retreq").style.color = "red";
+    }
+    function mouseoutret() {
+        document.getElementById("retreq").style.color = "";
+    }
+    function mouseovercl() {
+        document.getElementById("clreq").style.color = "red";
+    }
+    function mouseoutcl() {
+        document.getElementById("clreq").style.color = "";
+    }
+    function mouseoverold() {
+        document.getElementById("oldreq").style.color = "red";
+    }
+    function mouseoutold() {
+        document.getElementById("oldreq").style.color = "";
+    }
+    function mouseovernew() {
+        document.getElementById("newreq").style.color = "red";
+    }
+    function mouseoutnew() {
+        document.getElementById("newreq").style.color = "";
+    }
+</script>
+
+    <br />
+    <h3 style="text-align:center;">@Html.DisplayFor(model => model.Name)</h3>
+    <br /><br />
+
+<table class="table" style="padding-bottom:0em; margin-bottom:0px;">
+
+    <tr>
+        <th>
+            @Html.DisplayName("Мурожаат рақами")
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.Id)
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayName("Жўнатувчи")
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.Name)
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayName("Телефон")
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.Phone)
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayName("Электрон почта")
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.Email)
+        </td>
+    </tr>
+
+
+    <tr>
+        <th>
+            @Html.DisplayName("Teкст")
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.Message)
+        </td>
+    </tr>
+
+</table>
+}

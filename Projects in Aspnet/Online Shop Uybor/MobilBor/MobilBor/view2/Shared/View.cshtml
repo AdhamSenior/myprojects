@@ -1,0 +1,263 @@
+﻿@{
+    Layout = null;
+    MobilBor.Models.mobilborEntities db = new MobilBor.Models.mobilborEntities();
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal cabinet</title>
+    <link href="~/Content/gentelella-master/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <link href="~/Content/gentelella-master/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/build/css/custom.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/build/css/custom.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+
+                        <a href="/Cabinet/Index" class="site_title"><i class="fa fa-home"></i> <span>UySavdosi</span></a>
+
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="profile" style="text-align:center;">
+                        <div class="profile_img">
+                            <img style="width:120px;height:120px; margin-left:0px;" src="~/Content/77-512.png" alt="..." class="img-circle profile_img">
+                        </div>
+                    </div>
+                    <br />
+                    <!-- sidebar menu -->
+                    <!-- sidebar menu -->
+
+
+
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href="/Cabinet/Index"><i class="fa fa-home"></i> Асосий саҳифа </a>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-plus-circle"></i> Эълон бериш <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/Cabinet/Add">Квартира</a></li>
+                                        <li><a href="/Cabinet/AddSecond">Земельная участка</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a><i class="fa fa-newspaper-o"></i> Эълонлар <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/Cabinet/IndexNew">Актив эълонлар</a></li>
+                                        <li><a href="/Cabinet/newAdses">Кутиш жараёнидаги эълонлар</a></li>
+                                        <li><a href="/Cabinet/IndexOld">Mуддати утган эълонлар</a></li>
+                                        <li><a href="/Cabinet/Sales_Ads">Сотилган уйлар рўйхати</a></li>
+                                        <li><a href="/Cabinet/Reject_Ads">Рад этилган эълонлар</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-user"></i> Фойдаланувчилар <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/Cabinet/Users">Админлар</a></li>
+                                        <li><a href="/Cabinet/User">Фойдаланувчилар</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/Cabinet/ContactUs"><i class="fa fa-envelope-o"></i> Xaбарлар </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+                </div>
+            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="width:220px; text-align:center;">
+                                    Шахсий кабинет
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="/Cabinet/ChangePassword"><i class="fa fa-recycle pull-right"></i> Паролни ўзгартириш</a></li>
+                                    <li><a href="/Cabinet/Exit"><i class="fa fa-sign-out pull-right"></i> Чиқиш</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <br />
+                <br />
+                <br />
+
+                <div class="row tile_count">
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top"><i class="fa fa-list"></i> Жами эълонлар</span>
+                        <div class="count blue">@db.Adses.Count()</div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" onmousedown="window.location.href=' '" onmouseover="mouseovernew()" onmouseout="mouseoutnew()" id="newreq">
+                        <span class="count_top"><i class="fa fa-inbox"></i> Сотаман</span>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="count purple">@db.Adses.Where(x => x.Operation_Id == 2).Count()</div>
+                            </div>
+                            @*<div class="col-md-2 count purple">
+                                <h3>
+                                    / (@ViewBag.NewProcent%)
+                                </h3>
+                            </div>*@
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" onmousedown="window.location.href=' '" onmouseover="mouseoverold()" onmouseout="mouseoutold()" id="oldreq">
+                        <span class="count_top"><i class="fa fa-folder-open"></i> Сотиб оламан</span>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="count red">@db.Adses.Where(x => x.Operation_Id == 1).Count()</div>
+                            </div>
+                            @*<div class="col-md-2 count red">
+                                <h3>
+                                    / (@ViewBag.OpenProcent%)
+                                </h3>
+                            </div>*@
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" onmousedown="window.location.href=' '" onmouseover="mouseoverold()" onmouseout="mouseoutold()" id="okreq">
+                        <span class="count_top"><i class="fa fa-folder-open"></i> Ижарага бераман</span>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="count green">@db.Adses.Where(x => x.Operation_Id == 3).Count()</div>
+                            </div>
+                            @*<div class="col-md-2 count red">
+                                <h3>
+                                    / (@ViewBag.OpenProcent%)
+                                </h3>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                        function mouseoverok() {
+                            document.getElementById("okreq").style.color = "green";
+                        }
+                        function mouseoutok() {
+                            document.getElementById("okreq").style.color = "";
+                        }
+                        function mouseoverret() {
+                            document.getElementById("retreq").style.color = "red";
+                        }
+                        function mouseoutret() {
+                            document.getElementById("retreq").style.color = "";
+                        }
+                        function mouseovercl() {
+                            document.getElementById("clreq").style.color = "red";
+                        }
+                        function mouseoutcl() {
+                            document.getElementById("clreq").style.color = "";
+                        }
+                        function mouseoverold() {
+                            document.getElementById("oldreq").style.color = "red";
+                        }
+                        function mouseoutold() {
+                            document.getElementById("oldreq").style.color = "";
+                        }
+                        function mouseovernew() {
+                            document.getElementById("newreq").style.color = "purple";
+                        }
+                        function mouseoutnew() {
+                            document.getElementById("newreq").style.color = "";
+                        }
+                </script>
+                
+                @RenderBody()
+                <div class="clearfix"></div>
+            </div>
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                   Uysavdosi.uz
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+    
+    <!-- Bootstrap -->
+    <script src="~/Content/gentelella-master/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <!-- NProgress -->
+    <!-- Chart.js -->
+    <script src="~/Content/gentelella-master/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="~/Content/gentelella-master/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="~/Content/gentelella-master/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/Content/gentelella-master/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="~/Content/gentelella-master/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="~/Content/gentelella-master/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="~/Content/gentelella-master/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="~/Content/gentelella-master/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="~/Content/gentelella-master/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="~/Content/gentelella-master/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="~/Content/gentelella-master/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/Content/gentelella-master/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="~/Content/gentelella-master/vendors/moment/min/moment.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="~/Content/gentelella-master/build/js/custom.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/dropzone/dist/min/dropzone.min.js"></script>
+
+</body>
+</html>
+
+
+<!-- Bootstrap -->
+<script src="~/Content/gentelella-master/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+

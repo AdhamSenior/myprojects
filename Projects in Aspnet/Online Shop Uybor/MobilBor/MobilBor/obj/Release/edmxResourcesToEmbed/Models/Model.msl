@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище mobilborModelContainer" CdmEntityContainer="mobilborEntities">
+    <EntitySetMapping Name="Adses">
+      <EntityTypeMapping TypeName="mobilborModel.Adses">
+        <MappingFragment StoreEntitySet="Adses">
+          <ScalarProperty Name="Price_Real" ColumnName="Price_Real" />
+          <ScalarProperty Name="About_Mistake" ColumnName="About_Mistake" />
+          <ScalarProperty Name="Accept_Rejection" ColumnName="Accept_Rejection" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Operation_Id" ColumnName="Operation_Id" />
+          <ScalarProperty Name="Property_Id" ColumnName="Property_Id" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Area_Id" ColumnName="Area_Id" />
+          <ScalarProperty Name="Zone_Id" ColumnName="Zone_Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Build_Id" ColumnName="Build_Id" />
+          <ScalarProperty Name="State_Id" ColumnName="State_Id" />
+          <ScalarProperty Name="Classification_Id" ColumnName="Classification_Id" />
+          <ScalarProperty Name="Metro_Id" ColumnName="Metro_Id" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Contacts_Id" ColumnName="Contacts_Id" />
+          <ScalarProperty Name="PriceType_Id" ColumnName="PriceType_Id" />
+          <ScalarProperty Name="ShortText" ColumnName="ShortText" />
+          <ScalarProperty Name="CountRooms" ColumnName="CountRooms" />
+          <ScalarProperty Name="SquarePlace" ColumnName="SquarePlace" />
+          <ScalarProperty Name="LivePlace" ColumnName="LivePlace" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="All_Floor" ColumnName="All_Floor" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Furniture" ColumnName="Furniture" />
+          <ScalarProperty Name="Comissions" ColumnName="Comissions" />
+          <ScalarProperty Name="Top_Ads" ColumnName="Top_Ads" />
+          <ScalarProperty Name="Sales" ColumnName="Sales" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Assignment_Id" ColumnName="Assignment_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="mobilborModel.Areas">
+        <MappingFragment StoreEntitySet="Areas">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Assignments">
+      <EntityTypeMapping TypeName="mobilborModel.Assignments">
+        <MappingFragment StoreEntitySet="Assignments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="assignmentName" ColumnName="assignmentName" />
+          <ScalarProperty Name="assignmentNameRu" ColumnName="assignmentNameRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="mobilborModel.Brands">
+        <MappingFragment StoreEntitySet="Brands">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BrandUzk" ColumnName="BrandUzk" />
+          <ScalarProperty Name="BrandRu" ColumnName="BrandRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Building_Type">
+      <EntityTypeMapping TypeName="mobilborModel.Building_Type">
+        <MappingFragment StoreEntitySet="Building_Type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classification_Type">
+      <EntityTypeMapping TypeName="mobilborModel.Classification_Type">
+        <MappingFragment StoreEntitySet="Classification_Type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact">
+      <EntityTypeMapping TypeName="mobilborModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="mobilborModel.Contacts">
+        <MappingFragment StoreEntitySet="Contacts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ContactUzk" ColumnName="ContactUzk" />
+          <ScalarProperty Name="ContactRu" ColumnName="ContactRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Faces">
+      <EntityTypeMapping TypeName="mobilborModel.Faces">
+        <MappingFragment StoreEntitySet="Faces">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FaceUzk" ColumnName="FaceUzk" />
+          <ScalarProperty Name="FaceRu" ColumnName="FaceRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metro">
+      <EntityTypeMapping TypeName="mobilborModel.Metro">
+        <MappingFragment StoreEntitySet="Metro">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoneyTypes">
+      <EntityTypeMapping TypeName="mobilborModel.MoneyTypes">
+        <MappingFragment StoreEntitySet="MoneyTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MoneyTypeUzk" ColumnName="MoneyTypeUzk" />
+          <ScalarProperty Name="MoneyTypeRu" ColumnName="MoneyTypeRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operation_Types">
+      <EntityTypeMapping TypeName="mobilborModel.Operation_Types">
+        <MappingFragment StoreEntitySet="Operation_Types">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prices">
+      <EntityTypeMapping TypeName="mobilborModel.Prices">
+        <MappingFragment StoreEntitySet="Prices">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PriceUzk" ColumnName="PriceUzk" />
+          <ScalarProperty Name="PriceRu" ColumnName="PriceRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PriceTypes">
+      <EntityTypeMapping TypeName="mobilborModel.PriceTypes">
+        <MappingFragment StoreEntitySet="PriceTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PriceTypeUzk" ColumnName="PriceTypeUzk" />
+          <ScalarProperty Name="PriceTypeRu" ColumnName="PriceTypeRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property_Types">
+      <EntityTypeMapping TypeName="mobilborModel.Property_Types">
+        <MappingFragment StoreEntitySet="Property_Types">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Select">
+      <EntityTypeMapping TypeName="mobilborModel.Select">
+        <MappingFragment StoreEntitySet="Select">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Select_Uzb" ColumnName="Select_Uzb" />
+          <ScalarProperty Name="Select_Rus" ColumnName="Select_Rus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="State">
+      <EntityTypeMapping TypeName="mobilborModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="mobilborModel.States">
+        <MappingFragment StoreEntitySet="States">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StateUzk" ColumnName="StateUzk" />
+          <ScalarProperty Name="StateRu" ColumnName="StateRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statuses">
+      <EntityTypeMapping TypeName="mobilborModel.Statuses">
+        <MappingFragment StoreEntitySet="Statuses">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StatusUzk" ColumnName="StatusUzk" />
+          <ScalarProperty Name="StatusRu" ColumnName="StatusRu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="mobilborModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zones">
+      <EntityTypeMapping TypeName="mobilborModel.Zones">
+        <MappingFragment StoreEntitySet="Zones">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="Name_Uz" ColumnName="Name_Uz" />
+          <ScalarProperty Name="Name_Ru" ColumnName="Name_Ru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Хранилище mobilborModel.CheckLogin" FunctionImportName="CheckLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="mobilborModel.CheckLogin_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Accept_Rejections">
+      <EntityTypeMapping TypeName="mobilborModel.Accept_Rejections">
+        <MappingFragment StoreEntitySet="Accept_Rejections">
+          <ScalarProperty Name="Accept_Rejection_Type" ColumnName="Accept_Rejection_Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phones">
+      <EntityTypeMapping TypeName="mobilborModel.Phones">
+        <MappingFragment StoreEntitySet="Phones">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Picture6" ColumnName="Picture6" />
+          <ScalarProperty Name="Picture5" ColumnName="Picture5" />
+          <ScalarProperty Name="Picture4" ColumnName="Picture4" />
+          <ScalarProperty Name="Picture3" ColumnName="Picture3" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Face" ColumnName="Face" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="MoneyType" ColumnName="MoneyType" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PriceType" ColumnName="PriceType" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_1">
+      <EntityTypeMapping TypeName="mobilborModel.Table_1">
+        <MappingFragment StoreEntitySet="Table_1">
+          <ScalarProperty Name="AAA" ColumnName="AAA" />
+          <ScalarProperty Name="Sales_browcer" ColumnName="Sales browcer" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
