@@ -1,0 +1,229 @@
+﻿
+@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shop</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="OneTech shop project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/styles/bootstrap4/bootstrap.min.css">
+    <link href="~/Content/OneTech/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/styles/shop_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/styles/shop_responsive.css">
+
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <!-- Top Bar -->
+
+            <div class="top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex flex-row">
+                            <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="~/Content/OneTech/images/phone.png" alt=""></div>+998977529752</div>
+                            <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="~/Content/OneTech/images/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">dnetseniordeveloper@gmail.com</a></div>
+                            <div class="top_bar_content ml-auto">
+                                <div class="top_bar_menu">
+                                    <ul class="standard_dropdown top_bar_dropdown">
+                                        <li>
+                                            <a href="#">Uz<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li><a href="#">Ru</a></li>
+                                                <li><a href="#">Eng</a></li>
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="top_bar_user">
+
+                                    @{
+
+                                        if (Session["username"] != null)
+                                        {
+                                            string name = Session["username"].ToString();
+
+                                            <div class="user_icon"><img src="~/Content/OneTech/images/user.svg" alt=""></div>
+                                            <div><a href="/Home/Registered">привет @name</a></div>
+
+                                            <div><a href="/Home/Logout">Выйти</a></div>
+                                        }
+                                        else
+                                        {
+
+
+                                            <div class="user_icon"><img src="~/Content/OneTech/images/user.svg" alt=""></div>
+                                            <div><a href="/Home/Registered">Регистрация</a></div>
+
+                                                <div><a href="/Home/Login">Вход</a></div>
+
+                                        }
+
+
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Main -->
+
+            <div class="header_main">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Logo -->
+                        <div class="col-lg-2 col-sm-3 col-3 order-1">
+                            <div class="logo_container">
+                                <img src="~/Content/OneTech/images/makro-logo.png" style="width: 148%;  height: 77%; padding-top: 45px;  padding-left: 7px; padding-right: 13px;" />
+
+
+                            </div>
+                        </div>
+
+
+                        <!-- Search -->
+                        <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right" style="padding-left: 100px;">
+                            <div class="header_search" style="padding-left: 15px;">
+                                <div class="header_search_content">
+                                    <div class="header_search_form_container">
+                                        <form action="#" class="header_search_form clearfix">
+                                            <input type="search" required="required" class="header_search_input" placeholder="поиск продуктов..." style="width:100%">
+
+                                            <button type="submit" class="header_search_button trans_300" value="Submit"><img src="~/Content/OneTech/images/search.png" alt=""></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wishlist -->
+                        <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                            <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                                <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+                                    <div class="wishlist_icon"><img src="~/Content/OneTech/images/heart.png" alt=""></div>
+                                    <div class="wishlist_content">
+                                        <div class="wishlist_text"><a href="/home/wishlist">Избранное</a></div>
+                                        <div class="wishlist_count">0</div>
+                                    </div>
+                                </div>
+
+                                <!-- Cart -->
+                                <div class="cart">
+                                    <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                                        <div class="cart_icon">
+                                            <img src="~/Content/OneTech/images/cart.png" alt="">
+                                            <div class="cart_count"><span>@Session["count"]</span></div>
+                                        </div>
+                                        <div class="cart_content">
+                                            <div class="cart_text"><a href="/home/checkout">Корзинка</a></div>
+                                            <div class="cart_price">
+                                                @{
+
+
+                                                    int sum2 = Convert.ToInt32((Session["sum"]));
+
+
+
+
+                                                }
+                                                @sum2 сум
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+
+            <nav class="main_nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="main_nav_content d-flex flex-row" style="width:86%">
+
+                                <!-- Categories Menu -->
+                                <!-- Main Nav Menu -->
+
+                                <div class="main_nav_menu ml-auto">
+                                    <ul class="standard_dropdown main_nav_dropdown" style="width:105%">
+                                        <li><a href="/Home/index">Главная страница<i class="fas fa-chevron-down"></i></a></li>
+
+                                        <li><a href="/Home/Shop">Kаталог продуктов<i class="fas fa-chevron-down"></i></a></li>
+                                        @*<li><a href="/Home/Checkout">Корзинка<i class="fas fa-chevron-down"></i></a></li>*@
+                                        <li><a href="/Home/About">Информация о веб-сайте<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="/Home/Offers">Новости<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="/Home/Contact">Kонтакт<i class="fas fa-chevron-down"></i></a></li>
+
+
+                                    </ul>
+                                </div>
+
+                                <!-- Menu Trigger -->
+
+                                <div class="menu_trigger_container ml-auto">
+                                    <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+                                        <div class="menu_burger">
+                                            <div class="menu_trigger_text">menu</div>
+                                            <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Menu -->
+
+
+
+        </header>
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="home_background parallax-window" data-parallax="scroll" data-image-src="~/Content/OneTech/images/shop_background.jpg"></div>
+            <div class="home_overlay"></div>
+            <div class="home_content d-flex flex-column align-items-center justify-content-center">
+                @{
+                    if (Session["result"] != null)
+                    { <h2 class="text-primary" style="text-align:center">@Session["result"]</h2>}
+                    else
+                    {  <h2 class="home_title">Kаталог продуктов</h2>}
+
+                }
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

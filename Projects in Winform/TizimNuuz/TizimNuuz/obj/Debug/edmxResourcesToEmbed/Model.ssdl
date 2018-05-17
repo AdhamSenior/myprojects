@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TizimNuuzzModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="login" Type="text" />
+    <Property Name="password" Type="text" />
+    <Property Name="type" Type="int" />
+    <Property Name="FIO" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Info" Type="nvarchar(max)" />
+    <Property Name="lg" Type="nvarchar" MaxLength="50" />
+    <Property Name="pass" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AlreadyWork">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CreateTimeTableList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameEduCourse" Type="nvarchar" MaxLength="50" />
+    <Property Name="WorksType" Type="int" />
+    <Property Name="Students" Type="nvarchar(max)" />
+    <Property Name="Teachers" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="EduCoursesList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Teachers Name" Type="nvarchar(max)" />
+    <Property Name="Students Name" Type="nvarchar(max)" />
+    <Property Name="WorksList" Type="nvarchar(max)" />
+    <Property Name="WorksNumber" Type="nchar" MaxLength="10" />
+    <Property Name="WorksType" Type="int" />
+    <Property Name="Ball" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="RegistrationClientsUZMU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIO" Type="nvarchar(max)" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+    <Property Name="TypePerson" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TeachersUZMU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIO" Type="nvarchar(max)" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direction" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pulpit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+    <Property Name="Info" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TypePerson">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WorksTypee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Admin_TypePerson">
+    <End Role="TypePerson" Type="Self.TypePerson" Multiplicity="0..1" />
+    <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypePerson">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Admin">
+        <PropertyRef Name="type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreateTimeTableList_WorksTypee">
+    <End Role="WorksTypee" Type="Self.WorksTypee" Multiplicity="0..1" />
+    <End Role="CreateTimeTableList" Type="Self.CreateTimeTableList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorksTypee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CreateTimeTableList">
+        <PropertyRef Name="WorksType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EduCoursesList_WorksTypee">
+    <End Role="WorksTypee" Type="Self.WorksTypee" Multiplicity="0..1" />
+    <End Role="EduCoursesList" Type="Self.EduCoursesList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorksTypee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EduCoursesList">
+        <PropertyRef Name="WorksType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrationClientsUZMU_TypePerson">
+    <End Role="TypePerson" Type="Self.TypePerson" Multiplicity="0..1" />
+    <End Role="RegistrationClientsUZMU" Type="Self.RegistrationClientsUZMU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypePerson">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegistrationClientsUZMU">
+        <PropertyRef Name="TypePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TizimNuuzzModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AlreadyWork" EntityType="Self.AlreadyWork" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CreateTimeTableList" EntityType="Self.CreateTimeTableList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EduCoursesList" EntityType="Self.EduCoursesList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RegistrationClientsUZMU" EntityType="Self.RegistrationClientsUZMU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeachersUZMU" EntityType="Self.TeachersUZMU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypePerson" EntityType="Self.TypePerson" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorksTypee" EntityType="Self.WorksTypee" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Admin_TypePerson" Association="Self.FK_Admin_TypePerson">
+      <End Role="TypePerson" EntitySet="TypePerson" />
+      <End Role="Admin" EntitySet="Admin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreateTimeTableList_WorksTypee" Association="Self.FK_CreateTimeTableList_WorksTypee">
+      <End Role="WorksTypee" EntitySet="WorksTypee" />
+      <End Role="CreateTimeTableList" EntitySet="CreateTimeTableList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EduCoursesList_WorksTypee" Association="Self.FK_EduCoursesList_WorksTypee">
+      <End Role="WorksTypee" EntitySet="WorksTypee" />
+      <End Role="EduCoursesList" EntitySet="EduCoursesList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrationClientsUZMU_TypePerson" Association="Self.FK_RegistrationClientsUZMU_TypePerson">
+      <End Role="TypePerson" EntitySet="TypePerson" />
+      <End Role="RegistrationClientsUZMU" EntitySet="RegistrationClientsUZMU" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

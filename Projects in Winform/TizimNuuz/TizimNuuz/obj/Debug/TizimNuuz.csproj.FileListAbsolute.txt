@@ -1,0 +1,56 @@
+c:\users\user\documents\visual studio 2015\Projects\TizimNuuz\TizimNuuz\bin\Debug\TizimNuuz.exe.config
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\bin\Debug\TizimNuuz.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\bin\Debug\TizimNuuz.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Form1.resources
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\bin\Debug\EntityFramework.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\bin\Debug\EntityFramework.xml
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Documents\Visual Studio 2015\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.int.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\TizimNuuz.exe.config
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\TizimNuuz.exe
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\TizimNuuz.pdb
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\EntityFramework.dll
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\EntityFramework.xml
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.csprojResolveAssemblyReference.cache
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.int.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Properties.Resources.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.csproj.GenerateResource.Cache
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.exe
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.pdb
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Menu.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.CreateNew.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.SelectUser.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.UpdateUser.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.UsersGroup.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Search.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\TizimNuuz.exe.manifest
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\TizimNuuz.application
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.exe.manifest
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.application
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.WaitForm.resources
+C:\Users\SeniorDeveloper\Documents\Visual Studio 2017\Projects\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Texts.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\bin\Debug\TizimNuuz.exe.config
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.exe
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.pdb
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.csprojResolveAssemblyReference.cache
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.AuthForm.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.CreateNew.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Menu.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.int.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Properties.Resources.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Search.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.SelectUser.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.Texts.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.UpdateUser.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.UsersGroup.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.WaitForm.resources
+H:\Projects\C# WinForm\TizimNuuz\TizimNuuz\obj\Debug\TizimNuuz.csproj.GenerateResource.Cache

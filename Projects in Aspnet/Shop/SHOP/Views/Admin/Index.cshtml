@@ -1,0 +1,149 @@
+﻿
+@{
+    Layout = "~/Views/Shared/Admin.cshtml";
+
+}
+    <div class="right_col" role="main">
+    <div class="">
+      
+       
+    
+        <div class="row top_tiles">
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa  fa-pie-chart"></i></div>
+                    <div class="count">@ViewBag.countProducts</div>
+                    <h3>Количество продуктов</h3>
+                    @*<p>Lorem ipsum psdea itgum rixt.</p>*@
+                </div>
+            </div>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-shopping-cart"></i></div>
+                    <div class="count">@ViewBag.countOrders</div>
+                    <h3>Количество<br /> заказов</h3>
+             
+                </div>
+            </div>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-users"></i></div>
+                    <div class="count">@ViewBag.countUsers</div>
+                    <h3>Количество пользователей</h3>
+                    
+                </div>
+            </div>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tile-stats">
+                    <div class="icon"><i class="fa fa-inbox"></i></div>
+                    <div class="count">@ViewBag.countContacts</div>
+                    <h3>Количество<br /> запросов</h3>
+              
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="row">
+
+
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div>
+                        <div class="x_title">
+                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Бестселлеры</h2>
+
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <ul class="list-unstyled top_profiles scroll-view">
+
+                            @{
+
+                                var keyvalue2 = (Dictionary<SHOP.Models.Product, int>)ViewData["topproduct"];
+
+                                foreach (var item in keyvalue2.OrderByDescending(key => key.Value).Take(5))
+                                {
+                                    <li class="media event">
+                                        <a class="pull-left border-aero profile_thumb">
+                                            <i class="fa fa-user aero"></i>
+                                        </a>
+                                        <div class="media-body">
+                                            <a class="title" href="#">@item.Key.Name</a>
+                                            <p><strong>@item.Key.Price</strong> @item.Key.Category.Type.Name </p>
+                                            <p>
+                                                <small>количество заказов: @item.Value </small>
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                }
+                            }
+
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div>
+                        <div class="x_title">
+                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Лучшие профили</h2>
+
+                          
+                            <div class="clearfix"></div>
+                        </div>
+                        <ul class="list-unstyled top_profiles scroll-view">
+
+                            @{
+
+                                var keyvalue = (Dictionary<SHOP.Models.User, int>)ViewData["topuser"];
+
+                                foreach (var item in keyvalue.OrderByDescending(key => key.Value).Take(5))
+                                {
+                                    <li class="media event">
+                                        <a class="pull-left border-aero profile_thumb">
+                                            <i class="fa fa-user aero"></i>
+                                        </a>
+                                        <div class="media-body">
+                                            <a class="title" href="#">@item.Key.Firstname @item.Key.Lastname</a>
+                                            <p>@item.Key.Address </p>
+                                            <p>
+                                                <small>количество заказов: @item.Value </small>
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                }
+                            }
+
+
+                               
+                       </ul>
+                    </div>
+                </div>
+           
+            
+
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            Шаблон для администратора Gentelella от Adham Kadirov
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+</div>
+            <!-- page content -->
+         
+  

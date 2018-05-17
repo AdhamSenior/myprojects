@@ -1,0 +1,447 @@
+﻿@{
+
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="OneTech shop project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/styles/bootstrap4/bootstrap.min.css">
+    <link href="~/Content/OneTech/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/styles/blog_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/OneTech/styles/blog_responsive.css">
+
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <!-- Top Bar -->
+
+            <div class="top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex flex-row">
+                            <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="~/Content/OneTech/images/phone.png" alt=""></div>+998977529752</div>
+                            <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="~/Content/OneTech/images/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">dnetseniordeveloper@gmail.com</a></div>
+                            <div class="top_bar_content ml-auto">
+                                <div class="top_bar_menu">
+                                    <ul class="standard_dropdown top_bar_dropdown">
+                                        <li>
+                                            <a href="#">Uz<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li><a href="#">Ru</a></li>
+                                                <li><a href="#">Eng</a></li>
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="top_bar_user">
+
+                                    @{
+
+                                        if (Session["username"] != null)
+                                        {
+                                            string name = Session["username"].ToString();
+
+                                            <div class="user_icon"><img src="~/Content/OneTech/images/user.svg" alt=""></div>
+                                            <div><a href="/Home/Registered">привет @name</a></div>
+
+                                            <div><a href="/Home/Logout">Выйти</a></div>
+                                        }
+                                        else
+                                        {
+
+
+                                            <div class="user_icon"><img src="~/Content/OneTech/images/user.svg" alt=""></div>
+                                                <div><a href="/Home/Registered">Регистрация</a></div>
+
+                                                <div><a href="/Home/Login">Вход</a></div>
+
+                                        }
+
+
+                                    }
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Main -->
+
+            <div class="header_main">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Logo -->
+                        <div class="col-lg-2 col-sm-3 col-3 order-1">
+                            <div class="logo_container">
+                                <a href="/home/index">
+                                    <img src="~/Content/OneTech/images/makro-logo.png" style="width: 148%;  height: 77%; padding-top: 45px;  padding-left: 7px; padding-right: 13px;" />
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Search -->
+                        <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right" style="padding-left: 100px;">
+                            <div class="header_search" style="padding-left: 15px;">
+                                <div class="header_search_content">
+                                    <div class="header_search_form_container">
+                                        <form action="@Url.Action("Search","Home")" method="post" class="header_search_form clearfix">
+                                            <input type="search" required="required" class="header_search_input" name="search" placeholder="поиск продуктов..." style="width:100%">
+
+                                            <button type="submit" class="header_search_button trans_300" value="Submit"><img src="~/Content/OneTech/images/search.png" alt=""></button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wishlist -->
+                        <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                            <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                                <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+                                    <div class="wishlist_icon"><img src="~/Content/OneTech/images/heart.png" alt=""></div>
+                                    <div class="wishlist_content">
+                                        <div class="wishlist_text"><a href="#">Избранное</a></div>
+                                        <div class="wishlist_count">0</div>
+                                    </div>
+                                </div>
+
+                                <!-- Cart -->
+                                <div class="cart">
+                                    <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                                        <div class="cart_icon">
+                                            <img src="~/Content/OneTech/images/cart.png" alt="">
+                                            <div class="cart_count"><span>@Session["count"]</span></div>
+                                        </div>
+                                        <div class="cart_content">
+                                            <div class="cart_text"><a href="/home/checkout">Корзинка</a></div>
+                                            <div class="cart_price">
+                                                @{
+
+
+                                                    int sum2 = Convert.ToInt32((Session["sum"]));
+
+
+
+
+                                                }
+                                                @sum2 сум
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+
+            <nav class="main_nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="main_nav_content d-flex flex-row" style="width:86%">
+
+                                <!-- Categories Menu -->
+                                <!-- Main Nav Menu -->
+
+                                <div class="main_nav_menu ml-auto">
+                                    <ul class="standard_dropdown main_nav_dropdown" style="width:105%">
+                                        <li><a href="/Home/index">Главная страница<i class="fas fa-chevron-down"></i></a></li>
+
+                                        <li><a href="/Home/Shop">Kаталог продуктов<i class="fas fa-chevron-down"></i></a></li>
+                                        @*<li><a href="/Home/Checkout">Корзинка<i class="fas fa-chevron-down"></i></a></li>*@
+                                        <li><a href="/Home/About">Информация о веб-сайте<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="/Home/Offers">Новости<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="/Home/Contact">Kонтакт<i class="fas fa-chevron-down"></i></a></li>
+
+
+                                    </ul>
+                                </div>
+
+                                <!-- Menu Trigger -->
+
+                                <div class="menu_trigger_container ml-auto">
+                                    <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+                                        <div class="menu_burger">
+                                            <div class="menu_trigger_text">menu</div>
+                                            <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Menu -->
+
+
+
+        </header>
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="home_background parallax-window" data-parallax="scroll" data-image-src="~/Content/OneTech/images/shop_background.jpg"></div>
+            <div class="home_overlay"></div>
+            <div class="home_content d-flex flex-column align-items-center justify-content-center">
+                <h2 class="home_title">Ежедневные скидки о продуктах</h2>
+            </div>
+        </div>
+
+        <!-- Blog -->
+
+        <div class="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="blog_posts d-flex flex-row align-items-start justify-content-between">
+
+                            <!-- Blog post -->
+                            <div class="blog_post">
+                                <div class="blog_image" style="background-image:url('/Content/news/1.jpg')"></div>
+                                <div class="blog_text">В понедельник 20% скидки будут для овощей и фруктов.</div>
+                                @*<div class="blog_button"><a href="#">Продолжить чтение</a></div>*@
+                            </div>
+
+                            <!-- Blog post -->
+                            <div class="blog_post">
+                                <div class="blog_image" style="background-image:url('/Content/news/2.png')"></div>
+                                <div class="blog_text">Во вторник 25% скидки будут на водные напитки.</div>
+                                @*<div class="blog_button"><a href="#">Продолжить чтение</a></div>*@
+                            </div>
+
+                            <!-- Blog post -->
+                            <div class="blog_post">
+                                <div class="blog_image" style="background-image:url('/Content/news/3.jpg')"></div>
+                                <div class="blog_text">В среду 15% скидки будут за яйца / молоко.</div>
+                                @*<div class="blog_button"><a href="#">Продолжить чтение</a></div>*@
+                            </div>
+
+                            <!-- Blog post -->
+                            <div class="blog_post">
+                                <div class="blog_image" style="background-image:url('/Content/news/4.png')"></div>
+                                <div class="blog_text">В четверг 20% скидки будут для продуктов из мяса.</div>
+                                @*<div class="blog_button"><a href="#">Продолжить чтение</a></div>*@
+                            </div>
+
+                            <!-- Blog post -->
+                            <div class="blog_post">
+                                <div class="blog_image" style="background-image:url('/Content/news/5.jpg')"></div>
+                                <div class="blog_text">В пятницу 10% скидки будут для холодных продуктов.</div>
+                                @*<div class="blog_button"><a href="#">Продолжить чтение</a></div>*@
+                            </div>
+
+                            <!-- Blog post -->
+                            <div class="blog_post">
+                                <div class="blog_image" style="background-image:url('/Content/news/6.jpg')"></div>
+                                <div class="blog_text">В субботу 20% скидки будут для бакалейных товаров.</div>
+                                @*<div class="blog_button"><a href="#">Продолжить чтение</a></div>*@
+                            </div>
+
+                            <!-- Blog post -->
+                            <div class="blog_post">
+                                <div class="blog_image" style="background-image:url('/Content/news/7.jpg')"></div>
+                                <div class="blog_text">По воскресеньям 30% скидки на чайные продукты.</div>
+                                @*<div class="blog_button"><a href="#">Продолжить чтение</a></div>*@
+                            </div>
+
+                            <!-- Blog post -->
+                            <div class="blog_post">
+                                <div class="blog_image" style="background-image:url('/Content/news/8.jpg')"></div>
+                                <div class="blog_text">Каждый день будет 15% скидка на хлебные продукты.</div>
+                                @*<div class="blog_button"><a href="#">Продолжить чтение</a></div>*@
+                            </div>
+
+                            <!-- Blog post -->
+                            <div class="blog_post">
+                                <div class="blog_image" style="background-image:url('/Content/news/9.jpeg')"></div>
+                                <div class="blog_text">Каждый последний день месяца будет 50% скидка на сладости.</div>
+                                @*<div class="blog_button"><a href="#">Продолжить чтение</a></div>*@
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
+                            <div class="newsletter_title_container">
+                                <div class="newsletter_icon"><img src="~/Content/OneTech/images/send.png" alt=""></div>
+                                <div class="newsletter_title">Подписаться на рассылку</div>
+                                <div class="newsletter_text"><p>... и получите 20% скидку на первые покупки.</p></div>
+                            </div>
+                            <div class="newsletter_content clearfix">
+                                <form action="@Url.Action("Subscribe","Home")" method="post" class="newsletter_form">
+                                    <input type="text" class="newsletter_input" name="email" placeholder="Введите ваш логин">
+                                    <button class="newsletter_button">Подписаться</button>
+                                    <div class="newsletter_unsubscribe_link"><a href="/Home/unSubscribe">Отказаться</a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_column footer_contact">
+                            <div class="logo_container">
+                                <div class="logo"><a href="/home/index">makro supermarket</a></div>
+                            </div>
+                            <div class="footer_title">Есть вопрос? Позвоните нам 24/7</div>
+                            <div class="footer_phone">+998977529752</div>
+                            <div class="footer_contact_text">
+                                <p>2Б ул. Ахмада Дониша</p>
+                                <p>Ташкент Узбекистан</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 offset-lg-2">
+                        <div class="footer_column">
+                            <div class="footer_title">Каталог продуктов</div>
+                            <ul class="footer_list">
+
+                                <li> @Html.ActionLink("Овощи и фрукты", "shop", new { id = 1 })</li>
+                                <li>
+                                    @Html.ActionLink("Вода/Напитки", "shop", new { id = 2 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Яйца / Молочные", "shop", new { id = 3 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Мясные изделия", "shop", new { id = 4 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Замороженные", "shop", new { id = 5 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Бакалея", "shop", new { id = 6 })
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="footer_column">
+                            <ul class="footer_list footer_list_2">
+
+
+                                <li> @Html.ActionLink("Чай/Кофе", "shop", new { id = 7 })</li>
+                                <li>
+                                    @Html.ActionLink("Хлебочные изделия", "shop", new { id = 8 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Cладости", "shop", new { id = 9 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Готовые блюда", "shop", new { id = 10 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Консервированные", "shop", new { id = 11 })
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="footer_column">
+
+                            <ul class="footer_list footer_list_2">
+
+
+                                <li> @Html.ActionLink("Хозяйственные товары", "shop", new { id = 12 })</li>
+                                <li>
+                                    @Html.ActionLink("Моющие средства", "shop", new { id = 13 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Для детей", "shop", new { id = 14 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Гигиена", "shop", new { id = 15 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Канцелярские товары", "shop", new { id = 16 })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Текстиль", "shop", new { id = 17 })
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <script src="~/Content/OneTech/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/OneTech/styles/bootstrap4/popper.js"></script>
+    <script src="~/Content/OneTech/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/Content/OneTech/plugins/greensock/TweenMax.min.js"></script>
+    <script src="~/Content/OneTech/plugins/greensock/TimelineMax.min.js"></script>
+    <script src="~/Content/OneTech/plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="~/Content/OneTech/plugins/greensock/animation.gsap.min.js"></script>
+    <script src="~/Content/OneTech/plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="~/Content/OneTech/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/Content/OneTech/plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="~/Content/OneTech/plugins/easing/easing.js"></script>
+    <script src="~/Content/OneTech/js/blog_custom.js"></script>
+</body>
+
+</html>

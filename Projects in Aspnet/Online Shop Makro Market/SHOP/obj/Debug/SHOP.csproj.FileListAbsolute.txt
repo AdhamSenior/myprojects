@@ -1,0 +1,459 @@
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\ApplicationInsights.config
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\csc.exe
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\System.Collections.Immutable.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\vbc.exe
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\VBCSCompiler.exe
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\roslyn\VBCSCompiler.exe.config
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\SHOP.dll.config
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\SHOP.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\SHOP.pdb
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Antlr3.Runtime.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.Web.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.WindowsServer.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.ApplicationInsights.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.Web.Infrastructure.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Newtonsoft.Json.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.Helpers.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.Mvc.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.Optimization.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.Razor.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.WebPages.Deployment.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.WebPages.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.WebPages.Razor.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\WebGrease.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.Web.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.AI.WindowsServer.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.ApplicationInsights.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.Helpers.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.Mvc.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.Optimization.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.Razor.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.WebPages.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.WebPages.Deployment.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\System.Web.WebPages.Razor.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Antlr3.Runtime.pdb
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\bin\Newtonsoft.Json.xml
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\obj\Debug\SHOP.csprojResolveAssemblyReference.cache
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\obj\Debug\SHOP.dll
+c:\users\developer\documents\visual studio 2015\Projects\SHOP\SHOP\obj\Debug\SHOP.pdb
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\ApplicationInsights.config
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\csc.exe
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\vbc.exe
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\VBCSCompiler.exe
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\SHOP.dll.config
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\SHOP.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\SHOP.pdb
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Antlr3.Runtime.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.Web.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Newtonsoft.Json.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.Helpers.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.Mvc.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.Optimization.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.Razor.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.WebPages.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.WebPages.Razor.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\WebGrease.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.Web.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.Helpers.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.Mvc.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.Optimization.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.Razor.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.WebPages.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\System.Web.WebPages.Razor.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Antlr3.Runtime.pdb
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\Newtonsoft.Json.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\obj\Debug\SHOP.csprojResolveAssemblyReference.cache
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\obj\Debug\SHOP.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\obj\Debug\SHOP.pdb
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\EntityFramework.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\EntityFramework.SqlServer.dll
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\EntityFramework.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\EntityFramework.SqlServer.xml
+C:\Users\Adham\Downloads\Telegram Desktop\Projects\SHOP\SHOP\bin\ru\EntityFramework.resources.dll
+C:\project\SHOP\SHOP\SHOP\bin\ApplicationInsights.config
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\csc.exe
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\System.Collections.Immutable.dll
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\System.Reflection.Metadata.dll
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\vbc.exe
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\VBCSCompiler.exe
+C:\project\SHOP\SHOP\SHOP\bin\roslyn\VBCSCompiler.exe.config
+C:\project\SHOP\SHOP\SHOP\bin\SHOP.dll.config
+C:\project\SHOP\SHOP\SHOP\bin\SHOP.dll
+C:\project\SHOP\SHOP\SHOP\bin\SHOP.pdb
+C:\project\SHOP\SHOP\SHOP\bin\Antlr3.Runtime.dll
+C:\project\SHOP\SHOP\SHOP\bin\EntityFramework.dll
+C:\project\SHOP\SHOP\SHOP\bin\EntityFramework.SqlServer.dll
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.Agent.Intercept.dll
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.DependencyCollector.dll
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.Web.dll
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.WindowsServer.dll
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.ApplicationInsights.dll
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.Web.Infrastructure.dll
+C:\project\SHOP\SHOP\SHOP\bin\Newtonsoft.Json.dll
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.Helpers.dll
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.Mvc.dll
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.Optimization.dll
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.Razor.dll
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.WebPages.Deployment.dll
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.WebPages.dll
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.WebPages.Razor.dll
+C:\project\SHOP\SHOP\SHOP\bin\WebGrease.dll
+C:\project\SHOP\SHOP\SHOP\bin\EntityFramework.xml
+C:\project\SHOP\SHOP\SHOP\bin\EntityFramework.SqlServer.xml
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.DependencyCollector.xml
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.Web.xml
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.AI.WindowsServer.xml
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.ApplicationInsights.xml
+C:\project\SHOP\SHOP\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.Helpers.xml
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.Mvc.xml
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.Optimization.xml
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.Razor.xml
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.WebPages.xml
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.WebPages.Deployment.xml
+C:\project\SHOP\SHOP\SHOP\bin\System.Web.WebPages.Razor.xml
+C:\project\SHOP\SHOP\SHOP\bin\Antlr3.Runtime.pdb
+C:\project\SHOP\SHOP\SHOP\bin\Newtonsoft.Json.xml
+C:\project\SHOP\SHOP\SHOP\bin\ru\EntityFramework.resources.dll
+C:\project\SHOP\SHOP\SHOP\obj\Debug\SHOP.csprojResolveAssemblyReference.cache
+C:\project\SHOP\SHOP\SHOP\obj\Debug\SHOP.dll
+C:\project\SHOP\SHOP\SHOP\obj\Debug\SHOP.pdb
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\ApplicationInsights.config
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\csc.exe
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\vbc.exe
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\VBCSCompiler.exe
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\SHOP.dll.config
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\SHOP.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\SHOP.pdb
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Antlr3.Runtime.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\EntityFramework.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\EntityFramework.SqlServer.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.Web.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Newtonsoft.Json.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.Helpers.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.Mvc.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.Optimization.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.Razor.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.WebPages.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.WebPages.Razor.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\WebGrease.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\EntityFramework.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\EntityFramework.SqlServer.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.Web.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.Helpers.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.Mvc.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.Optimization.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.Razor.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.WebPages.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\System.Web.WebPages.Razor.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Antlr3.Runtime.pdb
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\Newtonsoft.Json.xml
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\bin\ru\EntityFramework.resources.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\obj\Debug\SHOP.csprojResolveAssemblyReference.cache
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\obj\Debug\SHOP.dll
+C:\Users\Adham\Downloads\Telegram Desktop\SHOP\SHOP\SHOP\SHOP\obj\Debug\SHOP.pdb
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\ApplicationInsights.config
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\csc.exe
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\System.Collections.Immutable.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\System.Reflection.Metadata.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\vbc.exe
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\VBCSCompiler.exe
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\roslyn\VBCSCompiler.exe.config
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\SHOP.dll.config
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\SHOP.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\SHOP.pdb
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Antlr3.Runtime.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\EntityFramework.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\EntityFramework.SqlServer.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.DependencyCollector.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Web.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.WindowsServer.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.ApplicationInsights.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.Web.Infrastructure.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Newtonsoft.Json.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.Helpers.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.Mvc.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.Optimization.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.Razor.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Deployment.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Razor.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\WebGrease.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\EntityFramework.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\EntityFramework.SqlServer.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.DependencyCollector.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Web.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.AI.WindowsServer.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.ApplicationInsights.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.Helpers.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.Mvc.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.Optimization.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.Razor.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Deployment.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Razor.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Antlr3.Runtime.pdb
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\Newtonsoft.Json.xml
+E:\Adham\Univer\SHOP 1.7 version\SHOP\bin\ru\EntityFramework.resources.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\obj\Debug\SHOP.csprojResolveAssemblyReference.cache
+E:\Adham\Univer\SHOP 1.7 version\SHOP\obj\Debug\SHOP.dll
+E:\Adham\Univer\SHOP 1.7 version\SHOP\obj\Debug\SHOP.pdb
+H:\SHOP\SHOP 1.7 version\SHOP\bin\ApplicationInsights.config
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\csc.exe
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\System.Collections.Immutable.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\System.Reflection.Metadata.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\vbc.exe
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\VBCSCompiler.exe
+H:\SHOP\SHOP 1.7 version\SHOP\bin\roslyn\VBCSCompiler.exe.config
+H:\SHOP\SHOP 1.7 version\SHOP\bin\SHOP.dll.config
+H:\SHOP\SHOP 1.7 version\SHOP\bin\SHOP.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\SHOP.pdb
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Antlr3.Runtime.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\EntityFramework.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\EntityFramework.SqlServer.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Agent.Intercept.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.DependencyCollector.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.PerfCounterCollector.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Web.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.WindowsServer.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.ApplicationInsights.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.Web.Infrastructure.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Newtonsoft.Json.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.Helpers.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.Mvc.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.Optimization.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.Razor.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Deployment.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Razor.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\WebGrease.dll
+H:\SHOP\SHOP 1.7 version\SHOP\bin\EntityFramework.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\EntityFramework.SqlServer.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.DependencyCollector.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Web.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.AI.WindowsServer.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.ApplicationInsights.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.Helpers.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.Mvc.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.Optimization.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.Razor.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Deployment.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Razor.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Antlr3.Runtime.pdb
+H:\SHOP\SHOP 1.7 version\SHOP\bin\Newtonsoft.Json.xml
+H:\SHOP\SHOP 1.7 version\SHOP\bin\ru\EntityFramework.resources.dll
+H:\SHOP\SHOP 1.7 version\SHOP\obj\Debug\SHOP.csprojResolveAssemblyReference.cache
+H:\SHOP\SHOP 1.7 version\SHOP\obj\Debug\SHOP.dll
+H:\SHOP\SHOP 1.7 version\SHOP\obj\Debug\SHOP.pdb
+C:\SHOP 1.7 version\SHOP\obj\Debug\SHOP.csprojResolveAssemblyReference.cache
+C:\SHOP 1.7 version\SHOP\obj\Debug\SHOP.dll
+C:\SHOP 1.7 version\SHOP\obj\Debug\SHOP.pdb
+C:\SHOP 1.7 version\SHOP\bin\ApplicationInsights.config
+C:\SHOP 1.7 version\SHOP\bin\roslyn\csc.exe
+C:\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\SHOP 1.7 version\SHOP\bin\roslyn\System.Collections.Immutable.dll
+C:\SHOP 1.7 version\SHOP\bin\roslyn\System.Reflection.Metadata.dll
+C:\SHOP 1.7 version\SHOP\bin\roslyn\vbc.exe
+C:\SHOP 1.7 version\SHOP\bin\roslyn\VBCSCompiler.exe
+C:\SHOP 1.7 version\SHOP\bin\roslyn\VBCSCompiler.exe.config
+C:\SHOP 1.7 version\SHOP\bin\SHOP.dll.config
+C:\SHOP 1.7 version\SHOP\bin\SHOP.dll
+C:\SHOP 1.7 version\SHOP\bin\SHOP.pdb
+C:\SHOP 1.7 version\SHOP\bin\Antlr3.Runtime.dll
+C:\SHOP 1.7 version\SHOP\bin\EntityFramework.dll
+C:\SHOP 1.7 version\SHOP\bin\EntityFramework.SqlServer.dll
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Agent.Intercept.dll
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.DependencyCollector.dll
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Web.dll
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.WindowsServer.dll
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.ApplicationInsights.dll
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.Web.Infrastructure.dll
+C:\SHOP 1.7 version\SHOP\bin\Newtonsoft.Json.dll
+C:\SHOP 1.7 version\SHOP\bin\System.Web.Helpers.dll
+C:\SHOP 1.7 version\SHOP\bin\System.Web.Mvc.dll
+C:\SHOP 1.7 version\SHOP\bin\System.Web.Optimization.dll
+C:\SHOP 1.7 version\SHOP\bin\System.Web.Razor.dll
+C:\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Deployment.dll
+C:\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.dll
+C:\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Razor.dll
+C:\SHOP 1.7 version\SHOP\bin\WebGrease.dll
+C:\SHOP 1.7 version\SHOP\bin\EntityFramework.xml
+C:\SHOP 1.7 version\SHOP\bin\EntityFramework.SqlServer.xml
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.DependencyCollector.xml
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Web.xml
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.AI.WindowsServer.xml
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.ApplicationInsights.xml
+C:\SHOP 1.7 version\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\SHOP 1.7 version\SHOP\bin\System.Web.Helpers.xml
+C:\SHOP 1.7 version\SHOP\bin\System.Web.Mvc.xml
+C:\SHOP 1.7 version\SHOP\bin\System.Web.Optimization.xml
+C:\SHOP 1.7 version\SHOP\bin\System.Web.Razor.xml
+C:\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.xml
+C:\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Deployment.xml
+C:\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Razor.xml
+C:\SHOP 1.7 version\SHOP\bin\Antlr3.Runtime.pdb
+C:\SHOP 1.7 version\SHOP\bin\Newtonsoft.Json.xml
+C:\SHOP 1.7 version\SHOP\bin\ru\EntityFramework.resources.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\ApplicationInsights.config
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\csc.exe
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\vbc.exe
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\VBCSCompiler.exe
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\SHOP.dll.config
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\SHOP.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\SHOP.pdb
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Antlr3.Runtime.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\EntityFramework.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\EntityFramework.SqlServer.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Web.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Newtonsoft.Json.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.Helpers.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.Mvc.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.Optimization.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.Razor.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Razor.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\WebGrease.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\EntityFramework.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\EntityFramework.SqlServer.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.Web.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.Helpers.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.Mvc.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.Optimization.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.Razor.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\System.Web.WebPages.Razor.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Antlr3.Runtime.pdb
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\Newtonsoft.Json.xml
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\bin\ru\EntityFramework.resources.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\obj\Debug\SHOP.csprojResolveAssemblyReference.cache
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\obj\Debug\SHOP.dll
+C:\Users\Adham\Desktop\SHOP 08.05.2018\SHOP 1.7 version\SHOP\obj\Debug\SHOP.pdb

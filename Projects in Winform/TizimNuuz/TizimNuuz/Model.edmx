@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TizimNuuzzModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="login" Type="text" />
+          <Property Name="password" Type="text" />
+          <Property Name="type" Type="int" />
+          <Property Name="FIO" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info" Type="nvarchar(max)" />
+          <Property Name="lg" Type="nvarchar" MaxLength="50" />
+          <Property Name="pass" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="AlreadyWork">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="CreateTimeTableList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameEduCourse" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorksType" Type="int" />
+          <Property Name="Students" Type="nvarchar(max)" />
+          <Property Name="Teachers" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EduCoursesList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Teachers Name" Type="nvarchar(max)" />
+          <Property Name="Students Name" Type="nvarchar(max)" />
+          <Property Name="WorksList" Type="nvarchar(max)" />
+          <Property Name="WorksNumber" Type="nchar" MaxLength="10" />
+          <Property Name="WorksType" Type="int" />
+          <Property Name="Ball" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="RegistrationClientsUZMU">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIO" Type="nvarchar(max)" />
+          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="TypePerson" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TeachersUZMU">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIO" Type="nvarchar(max)" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="Direction" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pulpit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="Info" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TypePerson">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="WorksTypee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Admin_TypePerson">
+          <End Role="TypePerson" Type="Self.TypePerson" Multiplicity="0..1" />
+          <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypePerson">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Admin">
+              <PropertyRef Name="type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CreateTimeTableList_WorksTypee">
+          <End Role="WorksTypee" Type="Self.WorksTypee" Multiplicity="0..1" />
+          <End Role="CreateTimeTableList" Type="Self.CreateTimeTableList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorksTypee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CreateTimeTableList">
+              <PropertyRef Name="WorksType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EduCoursesList_WorksTypee">
+          <End Role="WorksTypee" Type="Self.WorksTypee" Multiplicity="0..1" />
+          <End Role="EduCoursesList" Type="Self.EduCoursesList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorksTypee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EduCoursesList">
+              <PropertyRef Name="WorksType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationClientsUZMU_TypePerson">
+          <End Role="TypePerson" Type="Self.TypePerson" Multiplicity="0..1" />
+          <End Role="RegistrationClientsUZMU" Type="Self.RegistrationClientsUZMU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypePerson">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationClientsUZMU">
+              <PropertyRef Name="TypePerson" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TizimNuuzzModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AlreadyWork" EntityType="Self.AlreadyWork" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CreateTimeTableList" EntityType="Self.CreateTimeTableList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EduCoursesList" EntityType="Self.EduCoursesList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationClientsUZMU" EntityType="Self.RegistrationClientsUZMU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TeachersUZMU" EntityType="Self.TeachersUZMU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypePerson" EntityType="Self.TypePerson" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorksTypee" EntityType="Self.WorksTypee" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Admin_TypePerson" Association="Self.FK_Admin_TypePerson">
+            <End Role="TypePerson" EntitySet="TypePerson" />
+            <End Role="Admin" EntitySet="Admin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CreateTimeTableList_WorksTypee" Association="Self.FK_CreateTimeTableList_WorksTypee">
+            <End Role="WorksTypee" EntitySet="WorksTypee" />
+            <End Role="CreateTimeTableList" EntitySet="CreateTimeTableList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EduCoursesList_WorksTypee" Association="Self.FK_EduCoursesList_WorksTypee">
+            <End Role="WorksTypee" EntitySet="WorksTypee" />
+            <End Role="EduCoursesList" EntitySet="EduCoursesList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationClientsUZMU_TypePerson" Association="Self.FK_RegistrationClientsUZMU_TypePerson">
+            <End Role="TypePerson" EntitySet="TypePerson" />
+            <End Role="RegistrationClientsUZMU" EntitySet="RegistrationClientsUZMU" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TizimNuuzzModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="login" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="Int32" />
+          <NavigationProperty Name="TypePerson" Relationship="Self.FK_Admin_TypePerson" FromRole="Admin" ToRole="TypePerson" />
+          <Property Name="FIO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="lg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AlreadyWork">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CreateTimeTableList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameEduCourse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorksType" Type="Int32" />
+          <Property Name="Students" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Teachers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="WorksTypee" Relationship="Self.FK_CreateTimeTableList_WorksTypee" FromRole="CreateTimeTableList" ToRole="WorksTypee" />
+        </EntityType>
+        <EntityType Name="EduCoursesList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Teachers_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Students_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WorksList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WorksNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="WorksType" Type="Int32" />
+          <Property Name="Ball" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="WorksTypee" Relationship="Self.FK_EduCoursesList_WorksTypee" FromRole="EduCoursesList" ToRole="WorksTypee" />
+        </EntityType>
+        <EntityType Name="RegistrationClientsUZMU">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TypePerson" Type="Int32" />
+          <NavigationProperty Name="TypePerson1" Relationship="Self.FK_RegistrationClientsUZMU_TypePerson" FromRole="RegistrationClientsUZMU" ToRole="TypePerson" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TeachersUZMU">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Direction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pulpit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TypePerson">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Admins" Relationship="Self.FK_Admin_TypePerson" FromRole="TypePerson" ToRole="Admin" />
+          <NavigationProperty Name="RegistrationClientsUZMUs" Relationship="Self.FK_RegistrationClientsUZMU_TypePerson" FromRole="TypePerson" ToRole="RegistrationClientsUZMU" />
+        </EntityType>
+        <EntityType Name="WorksTypee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CreateTimeTableLists" Relationship="Self.FK_CreateTimeTableList_WorksTypee" FromRole="WorksTypee" ToRole="CreateTimeTableList" />
+          <NavigationProperty Name="EduCoursesLists" Relationship="Self.FK_EduCoursesList_WorksTypee" FromRole="WorksTypee" ToRole="EduCoursesList" />
+        </EntityType>
+        <Association Name="FK_Admin_TypePerson">
+          <End Role="TypePerson" Type="Self.TypePerson" Multiplicity="0..1" />
+          <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypePerson">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Admin">
+              <PropertyRef Name="type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CreateTimeTableList_WorksTypee">
+          <End Role="WorksTypee" Type="Self.WorksTypee" Multiplicity="0..1" />
+          <End Role="CreateTimeTableList" Type="Self.CreateTimeTableList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorksTypee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CreateTimeTableList">
+              <PropertyRef Name="WorksType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EduCoursesList_WorksTypee">
+          <End Role="WorksTypee" Type="Self.WorksTypee" Multiplicity="0..1" />
+          <End Role="EduCoursesList" Type="Self.EduCoursesList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorksTypee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EduCoursesList">
+              <PropertyRef Name="WorksType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationClientsUZMU_TypePerson">
+          <End Role="TypePerson" Type="Self.TypePerson" Multiplicity="0..1" />
+          <End Role="RegistrationClientsUZMU" Type="Self.RegistrationClientsUZMU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypePerson">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationClientsUZMU">
+              <PropertyRef Name="TypePerson" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TizimEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="AlreadyWorks" EntityType="Self.AlreadyWork" />
+          <EntitySet Name="CreateTimeTableLists" EntityType="Self.CreateTimeTableList" />
+          <EntitySet Name="EduCoursesLists" EntityType="Self.EduCoursesList" />
+          <EntitySet Name="RegistrationClientsUZMUs" EntityType="Self.RegistrationClientsUZMU" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TeachersUZMUs" EntityType="Self.TeachersUZMU" />
+          <EntitySet Name="TypePersons" EntityType="Self.TypePerson" />
+          <EntitySet Name="WorksTypees" EntityType="Self.WorksTypee" />
+          <AssociationSet Name="FK_Admin_TypePerson" Association="Self.FK_Admin_TypePerson">
+            <End Role="TypePerson" EntitySet="TypePersons" />
+            <End Role="Admin" EntitySet="Admins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CreateTimeTableList_WorksTypee" Association="Self.FK_CreateTimeTableList_WorksTypee">
+            <End Role="WorksTypee" EntitySet="WorksTypees" />
+            <End Role="CreateTimeTableList" EntitySet="CreateTimeTableLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EduCoursesList_WorksTypee" Association="Self.FK_EduCoursesList_WorksTypee">
+            <End Role="WorksTypee" EntitySet="WorksTypees" />
+            <End Role="EduCoursesList" EntitySet="EduCoursesLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationClientsUZMU_TypePerson" Association="Self.FK_RegistrationClientsUZMU_TypePerson">
+            <End Role="TypePerson" EntitySet="TypePersons" />
+            <End Role="RegistrationClientsUZMU" EntitySet="RegistrationClientsUZMUs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TizimNuuzzModelStoreContainer" CdmEntityContainer="TizimEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="TizimNuuzzModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="lg" ColumnName="lg" />
+                <ScalarProperty Name="Info" ColumnName="Info" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AlreadyWorks">
+            <EntityTypeMapping TypeName="TizimNuuzzModel.AlreadyWork">
+              <MappingFragment StoreEntitySet="AlreadyWork">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CreateTimeTableLists">
+            <EntityTypeMapping TypeName="TizimNuuzzModel.CreateTimeTableList">
+              <MappingFragment StoreEntitySet="CreateTimeTableList">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NameEduCourse" ColumnName="NameEduCourse" />
+                <ScalarProperty Name="WorksType" ColumnName="WorksType" />
+                <ScalarProperty Name="Students" ColumnName="Students" />
+                <ScalarProperty Name="Teachers" ColumnName="Teachers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EduCoursesLists">
+            <EntityTypeMapping TypeName="TizimNuuzzModel.EduCoursesList">
+              <MappingFragment StoreEntitySet="EduCoursesList">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Teachers_Name" ColumnName="Teachers Name" />
+                <ScalarProperty Name="Students_Name" ColumnName="Students Name" />
+                <ScalarProperty Name="WorksList" ColumnName="WorksList" />
+                <ScalarProperty Name="WorksNumber" ColumnName="WorksNumber" />
+                <ScalarProperty Name="WorksType" ColumnName="WorksType" />
+                <ScalarProperty Name="Ball" ColumnName="Ball" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationClientsUZMUs">
+            <EntityTypeMapping TypeName="TizimNuuzzModel.RegistrationClientsUZMU">
+              <MappingFragment StoreEntitySet="RegistrationClientsUZMU">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="TypePerson" ColumnName="TypePerson" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="TizimNuuzzModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeachersUZMUs">
+            <EntityTypeMapping TypeName="TizimNuuzzModel.TeachersUZMU">
+              <MappingFragment StoreEntitySet="TeachersUZMU">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Direction" ColumnName="Direction" />
+                <ScalarProperty Name="Pulpit" ColumnName="Pulpit" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Info" ColumnName="Info" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypePersons">
+            <EntityTypeMapping TypeName="TizimNuuzzModel.TypePerson">
+              <MappingFragment StoreEntitySet="TypePerson">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorksTypees">
+            <EntityTypeMapping TypeName="TizimNuuzzModel.WorksTypee">
+              <MappingFragment StoreEntitySet="WorksTypee">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

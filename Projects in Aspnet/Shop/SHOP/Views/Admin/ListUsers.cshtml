@@ -1,0 +1,506 @@
+﻿@model IEnumerable<SHOP.Models.User>
+
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DataTables | Gentellela</title>
+    <!-- Bootstrap -->
+    <link href="~/Content/gentelella-master/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/Content/gentelella-master/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/Content/gentelella-master/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="~/Content/gentelella-master/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="~/Content/gentelella-master/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/gentelella-master/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="~/Content/gentelella-master/build/css/custom.min.css" rel="stylesheet">
+</head>
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="/Admin/Index" class="site_title"> <i class="fa fa-home"></i><span> &nbsp   Админка </span></a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- menu profile quick info -->
+                    <div class="profile">
+                        <div class="profile_pic">
+
+                            <img src="~/Content/aa.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Добро пожаловать!</span>
+                            <h2>Администратор</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+                    <br /><br /><br /><br />
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+
+                            <h3 style="padding-top: 20px">Главная</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a><i class="fa fa-home"></i> Продукты <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/admin/listproducts"><i class="fa fa-list"></i>Список продуктов</a></li>
+                                        <li><a href="/admin/addproduct"><i class="fa fa-plus-circle"></i>Добавить продукт</a></li>
+
+                                    </ul>
+                                </li>
+
+
+
+
+                                <li>
+                                    <a><i class="fa fa-users"></i> Пользователей <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/admin/listusers"><i class="fa fa-list"></i>Список пользователей</a></li>
+                                        <li><a href="/admin/addUsers"><i class="fa fa-plus-circle"></i>Добавить пользователя</a></li>
+
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/admin/listorders"><i class="fa fa-desktop"></i> Заказы </a>
+
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-bar-chart"></i> Топ продажа  </a>
+
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-users"></i> Активные пользователи </a>
+
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-eye"></i> Недавно просмотренные </a>
+
+                                </li>
+
+
+
+                                @*<li>
+                                <a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="tables.html">Tables</a></li>
+                                    <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a><i class="fa fa-bar-chart-o"></i> Статистика о магазине <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="chartjs.html">Chart JS</a></li>
+                                    <li><a href="chartjs2.html">Chart JS2</a></li>
+                                    <li><a href="morisjs.html">Moris JS</a></li>
+                                    <li><a href="echarts.html">ECharts</a></li>
+                                    <li><a href="other_charts.html">Other Charts</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
+                                    <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                                </ul>
+                            </li>*@
+                            </ul>
+                        </div>
+                        <div class="menu_section">
+                            <h3>Управление админами</h3>
+                            <ul class="nav side-menu">
+
+                                <li>
+                                    <a><i class="fa fa-sitemap"></i> Администраторы </a>
+                                    @*<ul class="nav child_menu">
+                                    <li><a href="#level1_1">Level One</a>
+                                    <li>
+                                        <a>Level One<span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li class="sub_menu">
+                                                <a href="level2.html">Level Two</a>
+                                            </li>
+                                            <li>
+                                                <a href="#level2_1">Level Two</a>
+                                            </li>
+                                            <li>
+                                                <a href="#level2_2">Level Two</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#level1_2">Level One</a>
+                                    </li>
+                                </ul>*@
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-eye"></i>Запросы от пользователей </a>
+
+                                </li>
+                                @*<li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>*@
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+                    <!-- /menu footer buttons -->
+                    @*<div class="sidebar-footer hidden-small">
+                    <a data-toggle="tooltip" data-placement="top" title="Settings">
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="Lock">
+                        <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="Logout">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                    </a>
+                </div>*@
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    @{
+                                        if (Session["username"] != null)
+                                        {
+                                            @Session["username"]
+
+                                        }
+
+                                    }
+
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+
+
+                                    <li><a href="/admin/edituser/@TempData["userid"]"><i class="fa fa-wrench pull-right"></i> Settings</a></li>
+                                    @*<li><a href="javascript:;">Help</a></li>*@
+                                    <li><a href="/home/login"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                </ul>
+                            </li>
+                            @*<li role="presentation" class="dropdown">
+                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="badge bg-green">6</span>
+                            </a>
+                            <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                <li>
+                                    <a>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                        <span>
+                                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                        <span>
+                                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                        <span>
+                                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                        <span>
+                                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="text-center">
+                                        <a>
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>*@
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="">
+
+                    <div class="clearfix"></div>
+                    <div class="row">
+
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Список продуктов <small>...</small></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li>
+                                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+
+                                        <li style="padding-left: 10px">
+                                            <a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <p class="text-muted font-13 m-b-30"> Здесь список всех продуктов с смарт-таблицей и с интеллектуальным поиском </p>
+                                    <table id="datatable-buttons" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Имя</th>
+                                                <th>Фамилия</th>
+                                                <th>Номер телефона</th>
+                                                <th>Адрес</th>
+                                                <th>Логин</th>
+                                                <th>Пароль</th>
+                                                <th></th>
+                                                <th></th>
+                                        
+
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+            @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+
+        <td>
+
+
+
+
+            <a>
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                @Html.ActionLink("Изменить", "EditUser", new { id = item.id })
+            </a>
+
+        </td>
+
+        <td>
+            <a>
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                @Html.ActionLink("Удалить", "DeleteUser", new { id = item.id })
+            </a>
+
+        </td>
+     
+    </tr>
+        }
+
+                                       </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    Шаблон администрирования Bootstrap от Adham Qodirov.
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="~/Content/gentelella-master/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/gentelella-master/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/gentelella-master/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/Content/gentelella-master/vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="~/Content/gentelella-master/vendors/iCheck/icheck.min.js"></script>
+    <!-- Datatables -->
+    <script src="~/Content/gentelella-master/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="~/Content/gentelella-master/vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="~/Content/gentelella-master/vendors/pdfmake/build/vfs_fonts.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="~/Content/gentelella-master/build/js/custom.min.js"></script>
+    <!-- Datatables -->
+    <script>
+      $(document).ready(function() {
+        var handleDataTableButtons = function() {
+          if ($("#datatable-buttons").length) {
+            $("#datatable-buttons").DataTable({
+              dom: "Bfrtip",
+              buttons: [
+                {
+                  extend: "copy",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "csv",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "excel",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "pdfHtml5",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "print",
+                  className: "btn-sm"
+                },
+              ],
+              responsive: true
+            });
+          }
+        };
+
+        TableManageButtons = function() {
+          "use strict";
+          return {
+            init: function() {
+              handleDataTableButtons();
+            }
+          };
+        }();
+
+        $('#datatable').dataTable();
+
+        $('#datatable-keytable').DataTable({
+          keys: true
+        });
+
+        $('#datatable-responsive').DataTable();
+
+        $('#datatable-scroller').DataTable({
+          ajax: "js/datatables/json/scroller-demo.json",
+          deferRender: true,
+          scrollY: 380,
+          scrollCollapse: true,
+          scroller: true
+        });
+
+        $('#datatable-fixed-header').DataTable({
+          fixedHeader: true
+        });
+
+        var $datatable = $('#datatable-checkbox');
+
+        $datatable.dataTable({
+          'order': [[ 1, 'asc' ]],
+          'columnDefs': [
+            { orderable: false, targets: [0] }
+          ]
+        });
+        $datatable.on('draw.dt', function() {
+          $('input').iCheck({
+            checkboxClass: 'icheckbox_flat-green'
+          });
+        });
+
+        TableManageButtons.init();
+      });
+    </script>
+    <!-- /Datatables -->
+</body>
+</html>
+
+
+
